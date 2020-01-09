@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaobo1112.github.io/"/>
-  <updated>2020-01-09T03:47:00.485Z</updated>
+  <updated>2020-01-09T04:12:50.789Z</updated>
   <id>http://gaobo1112.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>c++ primer 学习笔记</title>
+    <link href="http://gaobo1112.github.io/2020/01/09/c++/c++primer/c++primer/"/>
+    <id>http://gaobo1112.github.io/2020/01/09/c++/c++primer/c++primer/</id>
+    <published>2020-01-09T11:19:17.000Z</published>
+    <updated>2020-01-09T04:12:50.789Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;第2章-变量和类型&quot;&gt;&lt;a href=&quot;#第2章-变量和类型&quot; class=&quot;headerlink&quot; title=&quot;第2章 变量和类型&quot;&gt;&lt;/a&gt;第2章 变量和类型&lt;/h1&gt;&lt;h2 id=&quot;基本内置变量&quot;&gt;&lt;a href=&quot;#基本内置变量&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="c++" scheme="http://gaobo1112.github.io/categories/c/"/>
+    
+    
+      <category term="c++,编程语言" scheme="http://gaobo1112.github.io/tags/c-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>博客搭建</title>
-    <link href="http://gaobo1112.github.io/2020/01/08/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    <id>http://gaobo1112.github.io/2020/01/08/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <link href="http://gaobo1112.github.io/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>http://gaobo1112.github.io/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
     <published>2020-01-08T11:19:17.000Z</published>
-    <updated>2020-01-09T03:47:00.485Z</updated>
+    <updated>2020-01-09T03:51:54.996Z</updated>
     
     <summary type="html">
     
