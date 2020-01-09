@@ -132,7 +132,7 @@ blockquote {
 }
 
 pre {
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem !important;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem !important;
     margin: 1rem 0 !important;
     background: #f5f2f0;
     overflow: auto;
@@ -141,6 +141,7 @@ pre {
 }
 
 .code-area::after {
+    padding-top: 0;
     content: " ";
     position: absolute;
     border-radius: 50%;

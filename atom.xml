@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaobo1112.github.io/"/>
-  <updated>2020-01-09T07:58:02.384Z</updated>
+  <updated>2020-01-09T11:36:22.369Z</updated>
   <id>http://gaobo1112.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://gaobo1112.github.io/2020/01/09/markdown%E6%95%99%E7%A8%8B/"/>
     <id>http://gaobo1112.github.io/2020/01/09/markdown%E6%95%99%E7%A8%8B/</id>
     <published>2020-01-09T14:31:18.000Z</published>
-    <updated>2020-01-09T07:58:02.384Z</updated>
+    <updated>2020-01-09T11:36:22.369Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,10 @@
       
         
         
-          &lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;使用#来表示标题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot; language-md&quot;&gt;&lt;code
         
       
     
@@ -75,7 +78,7 @@
     <link href="http://gaobo1112.github.io/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     <id>http://gaobo1112.github.io/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
     <published>2020-01-08T11:19:17.000Z</published>
-    <updated>2020-01-09T04:45:59.718Z</updated>
+    <updated>2020-01-09T11:51:57.436Z</updated>
     
     <summary type="html">
     
