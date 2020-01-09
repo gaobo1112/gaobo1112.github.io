@@ -125,7 +125,7 @@ blockquote {
 .line-numbers {
     padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
     margin: 1rem 0 !important;
-    background: #272822;
+    background: #80817a;
     overflow: auto;
     border-radius: 0.35rem;
     tab-size: 4;
@@ -134,7 +134,7 @@ blockquote {
 pre {
     padding: 2.5rem 1.5rem 1.5rem 1.5rem !important;
     margin: 1rem 0 !important;
-    background: #272822;
+    background: #f5f2f0;
     overflow: auto;
     border-radius: 0.35rem;
     tab-size: 4;
@@ -144,14 +144,14 @@ pre {
     content: " ";
     position: absolute;
     border-radius: 50%;
-    background: #ff5f56;
+    /*background: #ff5fff;
     width: 12px;
     height: 12px;
     top: 0;
     left: 12px;
     margin-top: 12px;
     -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
-    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f; */
 }
 
 code {
@@ -217,8 +217,8 @@ code {
 
 pre code {
     padding: 0;
-    color: #e8eaf6;
-    background-color: #272822;
+    color: #272822;
+    background-color: #f5f2f0;
 }
 
 pre[class*="language-"] {
