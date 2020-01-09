@@ -351,8 +351,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                                <span class="chip bg-color">博客教程</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
@@ -374,21 +374,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-08
+                    2020-01-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -554,6 +554,44 @@
       <span class="token key atrule">seperator</span><span class="token punctuation">:</span> <span class="token string">'-'</span></code></pre>
 </li>
 </ul>
+<h4 id="文章字数统计"><a href="#文章字数统计" class="headerlink" title="文章字数统计"></a>文章字数统计</h4><ul>
+<li>在文章中显示文章字数、阅读时长的信息，可以安装<a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="noopener">hexo-wordcount</a>插件。命令如下:<pre class=" language-bash"><code class="language-bash">  <span class="token function">npm</span> i --save hexo-wordcount</code></pre>
+</li>
+<li>需要修改<code>_config.yml</code>文件:<pre class=" language-yaml"><code class="language-yaml">  <span class="token key atrule">wordcount</span><span class="token punctuation">:</span>
+      <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 将这个值设置为 true 即可.</span>
+      <span class="token key atrule">postWordCount</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token key atrule">min2read</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token key atrule">totalCount</span><span class="token punctuation">:</span> <span class="token boolean important">true    </span></code></pre>
+</li>
+</ul>
+<h4 id="添加RSS订阅支持"><a href="#添加RSS订阅支持" class="headerlink" title="添加RSS订阅支持"></a>添加RSS订阅支持</h4><ul>
+<li>使用<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a>插件添加RSS订阅支持，安装命令如下:<pre class=" language-bash"><code class="language-bash">  <span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save</code></pre>
+</li>
+<li>修改<code>_config.yml</code>文件:<pre class=" language-yaml"><code class="language-yaml">  <span class="token key atrule">feed</span><span class="token punctuation">:</span>
+      <span class="token key atrule">type</span><span class="token punctuation">:</span> atom
+      <span class="token key atrule">path</span><span class="token punctuation">:</span> atom.xml
+      <span class="token key atrule">limit</span><span class="token punctuation">:</span> <span class="token number">20</span>
+      <span class="token key atrule">hub</span><span class="token punctuation">:</span>
+      <span class="token key atrule">content</span><span class="token punctuation">:</span>
+      <span class="token key atrule">content_limit</span><span class="token punctuation">:</span> <span class="token number">140</span>
+      <span class="token key atrule">content_limit_delim</span><span class="token punctuation">:</span> <span class="token string">' '</span>
+      <span class="token key atrule">order_by</span><span class="token punctuation">:</span> <span class="token punctuation">-</span>date</code></pre>
+</li>
+</ul>
+<h4 id="修改页脚"><a href="#修改页脚" class="headerlink" title="修改页脚"></a>修改页脚</h4><ul>
+<li>修改页脚的文件在<code>/layout/_partical/footer.ejs</code>文件中。可以修改最后站点的访问量或者等。</li>
+</ul>
+<h4 id="修改社交链接"><a href="#修改社交链接" class="headerlink" title="修改社交链接"></a>修改社交链接</h4><ul>
+<li>在<code>/layout/_partial/social-link.ejs</code>可以增加或者删除想要的社交链接。</li>
+</ul>
+<h4 id="修改打赏文件"><a href="#修改打赏文件" class="headerlink" title="修改打赏文件"></a>修改打赏文件</h4><ul>
+<li>图片存放位置是<code>source/medias/reward</code>,如果替换了文件且修改了图片的名称，注意将<code>themes</code>下的<code>_config.yml</code>的<code>reward</code>,具体修改如下:<pre class=" language-yaml"><code class="language-yaml">  <span class="token key atrule">reward</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">title</span><span class="token punctuation">:</span> 你的赏识是我前进的动力
+    <span class="token key atrule">wechat</span><span class="token punctuation">:</span> /medias/reward/weixin.jpg
+    <span class="token key atrule">alipay</span><span class="token punctuation">:</span> /medias/reward/zhifubao.jpg</code></pre>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -617,8 +655,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                                    <span class="chip bg-color">博客教程</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -830,8 +868,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">博客教程</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
@@ -886,8 +924,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">博客教程</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
@@ -1034,7 +1072,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8">
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">1k</span>
+                <span class="white-color">1.3k</span>
             
             <span id="sitetime"></span>
             
