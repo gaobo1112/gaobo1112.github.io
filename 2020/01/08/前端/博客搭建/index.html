@@ -412,14 +412,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -709,9 +709,11 @@
 <li>修改<code>source/css/metery.css</code>中的bg-color即可。</li>
 </ul>
 <h4 id="添加评论区"><a href="#添加评论区" class="headerlink" title="添加评论区"></a>添加评论区</h4><ul>
-<li>安装<a href="https://gitalk.github.io/" target="_blank" rel="noopener">gitalk</a>安装方法如下:<pre class=" language-bash"><code class="language-bash">  <span class="token function">npm</span> i --save gitalk</code></pre>
+<li><p>安装<a href="https://gitalk.github.io/" target="_blank" rel="noopener">gitalk</a>安装方法如下:</p>
+<pre class=" language-bash"><code class="language-bash">  <span class="token function">npm</span> i --save gitalk</code></pre>
 </li>
-<li>修改主题下的<code>_config.yml</code>文件：<pre class=" language-yaml"><code class="language-yaml">  <span class="token key atrule">gitalk</span><span class="token punctuation">:</span>
+<li><p>修改主题下的<code>_config.yml</code>文件：</p>
+<pre class=" language-yaml"><code class="language-yaml">  <span class="token key atrule">gitalk</span><span class="token punctuation">:</span>
     <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
     <span class="token key atrule">owner</span><span class="token punctuation">:</span> <span class="token string">'gaobo1112'</span>   <span class="token comment" spellcheck="true"># 替换为你自己的github用户名</span>
     <span class="token key atrule">repo</span><span class="token punctuation">:</span> <span class="token string">'gaobo1112.github.io'</span> <span class="token comment" spellcheck="true"># 你想用那个仓库来添加评论</span>
@@ -720,7 +722,8 @@
       <span class="token key atrule">clientSecret</span><span class="token punctuation">:</span> <span class="token string">'xxxxxxxxxxxxxxxxxxxxxxxxxxx'</span>
     <span class="token key atrule">admin</span><span class="token punctuation">:</span> <span class="token string">'gaobo1112'</span></code></pre>
 </li>
-<li>创建新的<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">OAuth Application</a>，填写规则如下:<pre class=" language-yaml"><code class="language-yaml">  appliaction name<span class="token punctuation">:</span> 随便起
+<li><p>创建新的<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">OAuth Application</a>，填写规则如下:</p>
+<pre class=" language-yaml"><code class="language-yaml">  appliaction name<span class="token punctuation">:</span> 随便起
   HomePage url<span class="token punctuation">:</span> 必须是你博客的地址
   Authorization callback URL<span class="token punctuation">:</span> 博客的地址</code></pre>
 </li>
@@ -730,10 +733,19 @@
 </li>
 </ul>
 <h4 id="解决hexo图片加载失败的问题"><a href="#解决hexo图片加载失败的问题" class="headerlink" title="解决hexo图片加载失败的问题"></a>解决hexo图片加载失败的问题</h4><ul>
-<li>修改<code>_config.yaml</code>中的<code>post_asset_folder: true</code>。</li>
-<li>下载<a href="https://github.com/xcodebuild/hexo-asset-image" target="_blank" rel="noopener">hexo-asset-image</a>,命令如下:</li>
+<li><p>修改<code>_config.yaml</code>中的<code>post_asset_folder: true</code>。</p>
+</li>
+<li><p>资源<code>Asset</code>代表<code>source</code> 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在<code>source/images</code>文件夹中。然后通过类似于<code>![](/images/image.jpg)</code> 的方法访问它们。</p>
+</li>
+<li><p>当资源文件管理功能打开后，<code>Hexo</code>将会在你每一次通过 <code>hexo new [layout] &lt;title&gt;</code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个 <code>markdown</code> 文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+</li>
+<li><p>通过常规的 <code>markdown</code> 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在<code>Hexo 2</code>时代，社区创建了很多插件来解决这个问题。但是，随着<code>Hexo 3</code> 的发布，许多新的标签插件被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。 </p>
+</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save hexo-asset-image</code></pre>
+<pre class=" language-md"><code class="language-md">{% asset_path slug %}
+{% asset_img slug [title] %}
+{% asset_img 图片名称 [图片说明] %}
+{% asset_link slug [title] %}</code></pre>
 
             </div>
             <hr/>
@@ -1264,7 +1276,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8">
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">37.3k</span>
+                <span class="white-color">37.6k</span>
             
             <span id="sitetime"></span>
             
