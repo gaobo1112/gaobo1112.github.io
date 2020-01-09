@@ -941,7 +941,7 @@ vector&lt;T&gt; v3(n,val);
 vector&lt;T&gt; v5{a,b,c...};
 vector&lt;T&gt; v5 = {a,b,c..};</code></pre><ul>
 <li>如果提供的是初始元素值的列表，只能把初始值放在花括号中进行列表初始化。</li>
-<li>可以提供vector对象容纳的元素的数量而不用略去初始值如：vector<int> ivec(10);</li>
+<li>可以提供vector对象容纳的元素的数量而不用略去初始值如：vector<int> ivec(10);</int></li>
 <li>vector中如果使用的是()可以说提供的值是用来构造vector对象的。如果是用花括号{},可以表述为使用初始化列表来初始化vector对象。但是如果{}提供的之不能列表初始化可以考虑构造初始化，如<code>vecotr&lt;string&gt; v{10};</code>表示v有10个默认初始化的元素。</li>
 </ul>
 <pre><code>练习3.12
@@ -3236,7 +3236,7 @@ c.load_factor()            //每个桶中的平均元素数量
 c.max_load_factor()        //c试图维护的平均桶大小
 c.rehash()                 //          
 c.reserve(n)               //              </code></pre><ul>
-<li>默认情况下，无序容器使用关键字类型==运算符比较元素。还使用hash<key_type>类型对象生成每个元素的哈希值。</li>
+<li>默认情况下，无序容器使用关键字类型==运算符比较元素。还使用hash<key_type>类型对象生成每个元素的哈希值。</key_type></li>
 </ul>
 <h1 id="第12章-动态内存"><a href="#第12章-动态内存" class="headerlink" title="第12章 动态内存"></a>第12章 动态内存</h1><h2 id="12-1-动态内存和智能指针"><a href="#12-1-动态内存和智能指针" class="headerlink" title="12.1 动态内存和智能指针"></a>12.1 动态内存和智能指针</h2><ul>
 <li>shared_ptr允许多个指针同时指向一个对象，unique_ptr独占所指对象。标准库还定义了一种名为weak_ptr的伴随类，是一种弱引用，指向shared_ptr所管理的对象。三个类型都定义在memory中。</li>
@@ -3867,7 +3867,7 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
 </li>
 </ul>
 <h3 id="14-8-2-标准库定义的函数对象（Library-Defined-Function-Objects）"><a href="#14-8-2-标准库定义的函数对象（Library-Defined-Function-Objects）" class="headerlink" title="14.8.2 标准库定义的函数对象（Library-Defined Function Objects）"></a>14.8.2 标准库定义的函数对象（Library-Defined Function Objects）</h3><ul>
-<li><p>标准库在头文件functional中定义了一组表示算术运算符、关系运算符和逻辑运算符的类，每个类分别定义了一个执行命名操作的调用运算符。这些类都被定义为模板的形式，可以为其指定具体的应用类型（即调用运算符的形参类型）。<br><img src="%E8%A1%A814.2.png" alt=""></p>
+<li><p>标准库在头文件functional中定义了一组表示算术运算符、关系运算符和逻辑运算符的类，每个类分别定义了一个执行命名操作的调用运算符。这些类都被定义为模板的形式，可以为其指定具体的应用类型（即调用运算符的形参类型）。<br><img src="/.io//%E8%A1%A814.2.png" alt></p>
 </li>
 <li><p>关系运算符的函数对象类通常被用来替换算法中的默认运算符，这些类对于指针同样适用。</p>
 <pre><code>  vector&lt;string *&gt; nameTable;    // vector of pointers
@@ -3878,7 +3878,7 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
   sort(nameTable.begin(), nameTable.end(), less&lt;string*&gt;());</code></pre><h3 id="14-8-3-可调用对象语与function"><a href="#14-8-3-可调用对象语与function" class="headerlink" title="14.8.3 可调用对象语与function"></a>14.8.3 可调用对象语与function</h3></li>
 <li><p>调用形式指明了调用返回的类型以及传递给调用的实参类型。不同的可调用对象可能具有相同的调用形式。</p>
 </li>
-<li><p>标准库function类型是一个模板，定义在头文件functional中，用来表示对象的调用形式。<br>  <img src="%E8%A1%A814.3.png" alt=""></p>
+<li><p>标准库function类型是一个模板，定义在头文件functional中，用来表示对象的调用形式。<br>  <img src="/.io//%E8%A1%A814.3.png" alt></p>
 </li>
 <li><p>创建一个具体的function类型时必须提供其所表示的对象的调用形式。</p>
 <pre><code>  // ordinary function
@@ -4562,7 +4562,7 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
       // process the range
       return *beg;   // return a reference to an element from the range
   }</code></pre></li>
-<li><p>标准库在头文件type_traits中定义了类型转换模板，这些模板常用于模板元程序设计。其中每个模板都有一个名为type的公有类型成员，表示一个类型。此类型与模板自身的模板类型参数相关。如果不可能（或不必要）转换模板参数，则type成员就是模板参数类型本身。<br>  <img src="%E8%A1%A816.1.png" alt=""></p>
+<li><p>标准库在头文件type_traits中定义了类型转换模板，这些模板常用于模板元程序设计。其中每个模板都有一个名为type的公有类型成员，表示一个类型。此类型与模板自身的模板类型参数相关。如果不可能（或不必要）转换模板参数，则type成员就是模板参数类型本身。<br>  <img src="/.io//%E8%A1%A816.1.png" alt></p>
 </li>
 <li><p>使用remove_reference可以获得引用对象的元素类型，如果用一个引用类型实例化remove_reference，则type表示被引用的类型。因为type是一个类的类型成员，所以在模板中必须使用关键字typename来告知编译器其表示一个类型。</p>
 <pre><code>  // must use typename to use a type member of a template parameter
@@ -4623,7 +4623,7 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
 <ul>
 <li>推断出的T类型为string。</li>
 <li>remove_reference用string进行实例化。</li>
-<li>remove_reference<string>的type成员是string。</li>
+<li>remove_reference<string>的type成员是string。</string></li>
 <li>move的返回类型是string&amp;&amp;。</li>
 <li>move的函数参数t的类型为string&amp;&amp;。</li>
 </ul>
@@ -4675,7 +4675,7 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
 
   // error: can&#39;t initialize int&amp;&amp; from an lvalue
   flip2(g, i, 42);  // flip2 passes an lvalue to g’s rvalue reference parameter</code></pre></li>
-<li><p>C++11在头文件utility中定义了forward。与move不同，forward必须通过显式模板实参调用，返回该显式实参类型的右值引用。即forward<T>返回类型T&amp;&amp;。</p>
+<li><p>C++11在头文件utility中定义了forward。与move不同，forward必须通过显式模板实参调用，返回该显式实参类型的右值引用。即forward<T>返回类型T&amp;&amp;。</T></p>
 </li>
 <li><p>通常情况下，可以使用forward传递定义为指向模板类型参数的右值引用函数参数。通过其返回类型上的引用折叠，forward可以保持给定实参的左值/右值属性</p>
 <pre><code>  template &lt;typename Type&gt;
@@ -4684,8 +4684,8 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
       finalFcn(std::forward&lt;Type&gt;(arg));
       // ...
   }</code></pre><ul>
-<li>如果实参是一个右值，则Type是一个普通（非引用）类型，forward<Type>返回类型Type&amp;&amp;。</li>
-<li>如果实参是一个左值，则通过引用折叠，Type也是一个左值引用类型，forward<Type>返回类型Type&amp;&amp; &amp;，对返回 类型进行引用折叠，得到Type&amp;。</li>
+<li>如果实参是一个右值，则Type是一个普通（非引用）类型，forward<Type>返回类型Type&amp;&amp;。</Type></li>
+<li>如果实参是一个左值，则通过引用折叠，Type也是一个左值引用类型，forward<Type>返回类型Type&amp;&amp; &amp;，对返回 类型进行引用折叠，得到Type&amp;。</Type></li>
 </ul>
 </li>
 <li><p>使用forward编写完善的转发函数。</p>
@@ -4871,7 +4871,7 @@ ostream&amp; print(ostream&amp;, const int&amp;, const string&amp;, const int&am
   fi.Bar();    // uses our specialization of Foo&lt;int&gt;::Bar()</code></pre></li>
 </ul>
 <h1 id="第17章-标准库特殊设施"><a href="#第17章-标准库特殊设施" class="headerlink" title="第17章 标准库特殊设施"></a>第17章 标准库特殊设施</h1><h2 id="17-1-tuple类型"><a href="#17-1-tuple类型" class="headerlink" title="17.1 tuple类型"></a>17.1 tuple类型</h2><ul>
-<li>tuple是类似pair的模板，定义在头文件tuple中。与pair不同，tuple可以有任意数量的成员。如果希望将一些数据组合成单一对象，但又不想定义新数据结构时，可以使用tuple（“快速而随意”的数据结构）。<br>  <img src="%E8%A1%A817.1.png" alt=""></li>
+<li>tuple是类似pair的模板，定义在头文件tuple中。与pair不同，tuple可以有任意数量的成员。如果希望将一些数据组合成单一对象，但又不想定义新数据结构时，可以使用tuple（“快速而随意”的数据结构）。<br>  <img src="/.io//%E8%A1%A817.1.png" alt></li>
 </ul>
 <h3 id="17-1-1-定义和初始化tuple（Defining-and-Initializing-tuples）"><a href="#17-1-1-定义和初始化tuple（Defining-and-Initializing-tuples）" class="headerlink" title="17.1.1 定义和初始化tuple（Defining and Initializing tuples）"></a>17.1.1 定义和初始化tuple（Defining and Initializing tuples）</h3><ul>
 <li>定义tuple时需要指定每个成员的类型。创建tuple对象时，可以使用tuple的默认构造函数，它会对每个成员进行值初始化。或者给每个成员提供初始值。包含初始值的构造函数是explicit的，因此必须使用直接初始化语法。<pre><code>  tuple&lt;size_t, size_t, size_t&gt; threeD = { 1, 2, 3 };   // error
@@ -4898,10 +4898,10 @@ tuple_element&lt;1, trans&gt;::type cnt = get&lt;1&gt;(item);    // cnt is an in
 <li>tuple的一个常见用途是从一个函数返回多个值。</li>
 </ul>
 <h2 id="17-2-bitset类型"><a href="#17-2-bitset类型" class="headerlink" title="17.2 bitset类型"></a>17.2 bitset类型</h2><h3 id="17-2-1-定义和初始化bitset"><a href="#17-2-1-定义和初始化bitset" class="headerlink" title="17.2.1 定义和初始化bitset"></a>17.2.1 定义和初始化bitset</h3><ul>
-<li>itset类是一个模板，类似array，具有固定的大小。定义一个bitset时需要指明它包含的二进制位数。<br>  <img src="%E8%A1%A817.2.png" alt=""></li>
+<li>itset类是一个模板，类似array，具有固定的大小。定义一个bitset时需要指明它包含的二进制位数。<br>  <img src="/.io//%E8%A1%A817.2.png" alt></li>
 <li>使用一个整型值初始化bitset时，此值会被转换为unsigned long long类型并被当作位模式处理。bitset中的二进制位就是此模式的副本。如果bitset的大小大于unsigned long long中的二进制位数，剩余的高位会被置为0。如果bitset的大小小于unsigned long long中的二进制位数，则只使用给定值的低位部分。</li>
 <li>可以使用string或字符数组指针来初始化bitset，字符直接表示位模式。使用字符串表示数时，字符串中下标最小的字符对应bitset的高位。如果string包含的字符数比bitset少，则bitset的高位被置为0。<h3 id="17-2-2-bitset操作"><a href="#17-2-2-bitset操作" class="headerlink" title="17.2.2 bitset操作"></a>17.2.2 bitset操作</h3></li>
-<li>bitset操作：<br>  <img src="%E8%A1%A817_3.png" alt=""></li>
+<li>bitset操作：<br>  <img src="/.io//%E8%A1%A817_3.png" alt></li>
 <li>bitset的下标运算符对const属性进行了重载。const版本的下标运算符在指定位置置位时返回true，否则返回false。非const版本返回bitset定义的一个特殊类型，用来控制指定位置的值。</li>
 <li>to_ulong和to_ullong操作用来提取bitset的值。只有当bitset的大小不大于对应操作的返回值（to_ulong为unsigned long，to_ullong为unsigned long long）时，才能使用这两个操作。如果bitset中的值不能存入给定类型，则会引发overflow_error异常。</li>
 <li>bitset的输入运算符从输入流读取字符，保存到临时的string对象中。遇到下列情况时停止读取：<ul>
@@ -4914,7 +4914,7 @@ tuple_element&lt;1, trans&gt;::type cnt = get&lt;1&gt;(item);    // cnt is an in
 <li>读取结束后用临时string对象初始化bitset。如果读取的字符数小于bitset的大小，则bitset的高位被置为0。</li>
 </ul>
 <h2 id="17-3-正则表达式"><a href="#17-3-正则表达式" class="headerlink" title="17.3 正则表达式"></a>17.3 正则表达式</h2><ul>
-<li>正则表达式是一种描述字符序列的方法。C++11新标准增加了正则表达式库（RE库），定义在头文件regex中，包含多个组件。<br>  <img src="%E8%A1%A817_4.png" alt=""></li>
+<li>正则表达式是一种描述字符序列的方法。C++11新标准增加了正则表达式库（RE库），定义在头文件regex中，包含多个组件。<br>  <img src="/.io//%E8%A1%A817_4.png" alt></li>
 <li>regex类表示一个正则表达式。<pre><code>  // find the characters ei that follow a character other than c
   string pattern(&quot;[^c]ei&quot;);
   // we want the whole word in which our pattern appears
@@ -4928,7 +4928,7 @@ tuple_element&lt;1, trans&gt;::type cnt = get&lt;1&gt;(item);    // cnt is an in
       cout &lt;&lt; results.str() &lt;&lt; endl;     // print the matching word</code></pre></li>
 <li>regex_match和regex_search函数确定一个给定的字符序列与一个regex是否匹配。如果整个输入序列与表达式匹配，则regex_match函数返回true；如果输入序列中的一个子串与表达式匹配，则regex_search函数返回true。这两个函数的其中一个重载版本接受一个类型为smatch的附加参数。如果匹配成功，函数会将匹配信息保存在给定的smatch对象中。<h3 id="17-3-1-使用正则表达式库"><a href="#17-3-1-使用正则表达式库" class="headerlink" title="17.3.1 使用正则表达式库"></a>17.3.1 使用正则表达式库</h3></li>
 <li>默认情况下，regex使用的正则表达式语言是ECMAScript。</li>
-<li>定义一个regex或者对一个regex调用assign为其赋新值时，可以指定一些标志来影响regex的操作。ECMAScript、basic、extended、awk、grep和egrep这六个标志指定编写正则表达式时所使用的语言。这六个标志中必须设置其中之一，且只能设置一个。默认情况下，ECMAScript标志被设置，regex会使用ECMA-262规范，这也是很多Web浏览器使用的正则表达式语言。<br>  <img src="%E8%A1%A817_6.png" alt=""></li>
+<li>定义一个regex或者对一个regex调用assign为其赋新值时，可以指定一些标志来影响regex的操作。ECMAScript、basic、extended、awk、grep和egrep这六个标志指定编写正则表达式时所使用的语言。这六个标志中必须设置其中之一，且只能设置一个。默认情况下，ECMAScript标志被设置，regex会使用ECMA-262规范，这也是很多Web浏览器使用的正则表达式语言。<br>  <img src="/.io//%E8%A1%A817_6.png" alt></li>
 <li>正则表达式的语法是否正确是在运行期间解析的。如果正则表达式存在错误，标准库会抛出类型为regex_error的异常。除了what操作外，regex_error还有一个名为code的成员，用来返回错误类型对应的数值编码。code返回的值是由具体实现定义的。RE库能抛出的标准错误如下，code返回对应错误的编号（从0开始）。</li>
 <li>RE库为不同的输入序列都定义了对应的类型。使用时RE库类型必须与输入类型匹配。<ul>
 <li>regex类保存char类型的正则表达式；wregex保存wchar_t类型的正则表达式。</li>
@@ -4981,7 +4981,7 @@ tuple_element&lt;1, trans&gt;::type cnt = get&lt;1&gt;(item);    // cnt is an in
   for (size_t i = 0; i &lt; 10; ++i)
       // u uses e as a source of numbers
       // each call returns a uniformly distributed value in the specified range
-      cout &lt;&lt; u(e) &lt;&lt; &quot; &quot;;</code></pre></li>
+      cout &lt;&lt; u(e) &lt;&lt; &quot; &quot;;</code></pre></unsigned></li>
 <li>类似引擎类型，分布类型也是函数对象类。分布类型定义了一个接受一个随机数引擎参数的调用运算符。分布对象使用它的引擎参数生成随机数，并将其映射到指定的分布区间。</li>
 <li>随机数发生器指分布对象和引擎对象的组合</li>
 <li>rand函数的生成范围在0到RAND_MAX之间，随机数引擎生成的unsigned整数在一个系统定义的范围内。一个引擎类型的范围可以通过调用该类型对象的min和max成员来获得。</li>
@@ -5195,7 +5195,7 @@ e3.seed(32767);     // call seed to set a new seed value</code></pre></li>
 </li>
 <li><p>一些操作可能从输入流中读取了未知个数的字节，使用gcount函数可以确定上一次未格式化输入操作读取了多少字符。gcount函数应该在任何后续未格式化输入操作前调用，将字符退回流的操作也属于未格式化输入操作。如果在调用gcount前使用了peek、unget或putback操作，则gcount的返回值为0。</p>
 </li>
-<li><p>使用clear、ignore和sync函数可以清空输入流中的数据。读到非法字符时，输入流将处于错误状态。为了继续获取输入数据，先调用clear函数重置流的错误标记。再调用ignore清空流中指定大小的数据，或者调用sync直接清空流中所有数据。numeric_limits<streamsize>::max()返回流的缓冲区大小。</p>
+<li><p>使用clear、ignore和sync函数可以清空输入流中的数据。读到非法字符时，输入流将处于错误状态。为了继续获取输入数据，先调用clear函数重置流的错误标记。再调用ignore清空流中指定大小的数据，或者调用sync直接清空流中所有数据。numeric_limits<streamsize>::max()返回流的缓冲区大小。</streamsize></p>
 <pre><code>  // 重置错误标志
   cin.clear();
 
@@ -5350,7 +5350,7 @@ e3.seed(32767);     // call seed to set a new seed value</code></pre></li>
   };</code></pre></li>
 <li><p>编译器合成拷贝控制成员时，也会生成一个异常声明。如果所有的成员和基类操作都含有noexcept说明，则合成成员也是noexcept的。</p>
 <h3 id="18-1-5-异常类层次"><a href="#18-1-5-异常类层次" class="headerlink" title="18.1.5 异常类层次"></a>18.1.5 异常类层次</h3></li>
-<li><p>标准库异常类的继承体系：<br>  <img src="%E8%A1%A818_1.png" alt=""></p>
+<li><p>标准库异常类的继承体系：<br>  <img src="/.io//%E8%A1%A818_1.png" alt></p>
 </li>
 <li><p>exception类型只定义了拷贝构造函数、拷贝赋值运算符、一个虚析构函数和一个名为what的虚成员。what函数返回一个const char*，指向一个以NULL结尾的字符数组，并且不会抛出异常。</p>
 </li>
@@ -5858,7 +5858,7 @@ bool Base::equal(const Base &rhs) const
 // do whatever is required to compare to Base objects
 }</code></pre>
 <h3 id="19-2-4-type-info类（The-type-info-Class）"><a href="#19-2-4-type-info类（The-type-info-Class）" class="headerlink" title="19.2.4 type_info类（The type_info Class）"></a>19.2.4 type_info类（The type_info Class）</h3><p><code>type_info</code>类的精确定义会根据编译器的不同而略有差异。但是C++规定<code>type_info</code>必须定义在头文件<em>typeinfo</em>中，并且至少提供以下操作：</p>
-<p><img src="Images/19-1.png" alt="19-1"></p>
+<p><img src="/.io//19-1.png" alt="19-1"></p>
 <p><code>type_info</code>类一般是作为一个基类出现，所以它还应该提供一个公有虚析构函数。当编译器希望提供额外的类型信息时，通常在<code>type_info</code>的派生类中完成。</p>
 <p><code>type_info</code>类没有默认构造函数，而且它的拷贝和移动构造函数以及赋值运算符都被定义为删除的。创建<code>type_info</code>对象的唯一方式就是使用<code>typeid</code>运算符。</p>
 <p>对于某种给定类型来说，<code>name</code>成员的返回值因编译器而异并且不一定与在程序中使用的名字一致。对于<code>name</code>返回值的唯一要求就是类型不同则返回的字符串必须有所区别。</p>
@@ -6212,7 +6212,7 @@ extern "C" void print(int);</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaobo1112.github.io/2020/01/09/c++/c++primer/c++primer/">http://gaobo1112.github.io/2020/01/09/c++/c++primer/c++primer/</a>
+                    <a href="http://gaobo1112.github.io/2020/01/09/c++/c++primer/">http://gaobo1112.github.io/2020/01/09/c++/c++primer/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -6447,7 +6447,7 @@ extern "C" void print(int);</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/09/markdown%E6%95%99%E7%A8%8B/">
+                <a href="/2020/01/09/%E5%89%8D%E7%AB%AF/markdown%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         

@@ -514,8 +514,11 @@
 </li>
 </ul>
 <h4 id="创建关于我about页"><a href="#创建关于我about页" class="headerlink" title="创建关于我about页"></a>创建关于我about页</h4><ul>
-<li><code>about</code>是用来展示关于我和我的博客的信息页面，创建关于我的命令如下:<pre class=" language-bash"><code class="language-bash">  hexo n page <span class="token string">"about"</span></code></pre>
+<li><p><code>about</code>是用来展示关于我和我的博客的信息页面，创建关于我的命令如下:</p>
+<pre class=" language-bash"><code class="language-bash">  hexo n page <span class="token string">"about"</span></code></pre>
 </li>
+</ul>
+<ul>
 <li>创建的关于我标签需要包含以下内容:<pre class=" language-yaml"><code class="language-yaml">  <span class="token punctuation">---</span>
   <span class="token key atrule">title</span><span class="token punctuation">:</span> about
   <span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-01-08 15:28:13</span>
@@ -726,6 +729,11 @@
 </blockquote>
 </li>
 </ul>
+<h4 id="解决hexo图片加载失败的问题"><a href="#解决hexo图片加载失败的问题" class="headerlink" title="解决hexo图片加载失败的问题"></a>解决hexo图片加载失败的问题</h4><ul>
+<li>修改<code>_config.yaml</code>中的<code>post_asset_folder: true</code>。</li>
+<li>下载<a href="https://github.com/xcodebuild/hexo-asset-image" target="_blank" rel="noopener">hexo-asset-image</a>,命令如下:</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save hexo-asset-image</code></pre>
 
             </div>
             <hr/>
@@ -986,7 +994,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/09/c++/c++primer/c++primer/">
+                <a href="/2020/01/09/c++/c++primer/">
                     <div class="card-image">
                         
                         
