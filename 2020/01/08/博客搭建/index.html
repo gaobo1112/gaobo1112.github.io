@@ -412,7 +412,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.9k
                 </div>
                 
 
@@ -696,9 +696,35 @@
 <td>无</td>
 <td>文章标签，一篇文章可以多个标签</td>
 </tr>
+<tr>
+<td>ojjkkkkk</td>
+<td></td>
+<td></td>
+</tr>
 </tbody></table>
 <h4 id="修改背景颜色"><a href="#修改背景颜色" class="headerlink" title="修改背景颜色"></a>修改背景颜色</h4><ul>
 <li>修改<code>source/css/metery.css</code>中的bg-color即可。</li>
+</ul>
+<h4 id="添加评论区"><a href="#添加评论区" class="headerlink" title="添加评论区"></a>添加评论区</h4><ul>
+<li>安装<a href="https://gitalk.github.io/" target="_blank" rel="noopener">gitalk</a>安装方法如下:<pre class=" language-bash"><code class="language-bash">  <span class="token function">npm</span> i --save gitalk</code></pre>
+</li>
+<li>修改主题下的<code>_config.yml</code>文件：<pre class=" language-yaml"><code class="language-yaml">  <span class="token key atrule">gitalk</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">owner</span><span class="token punctuation">:</span> <span class="token string">'gaobo1112'</span>   <span class="token comment" spellcheck="true"># 替换为你自己的github用户名</span>
+    <span class="token key atrule">repo</span><span class="token punctuation">:</span> <span class="token string">'gaobo1112.github.io'</span> <span class="token comment" spellcheck="true"># 你想用那个仓库来添加评论</span>
+    <span class="token key atrule">oauth</span><span class="token punctuation">:</span>
+      <span class="token key atrule">clientId</span><span class="token punctuation">:</span> <span class="token string">'xxxxxxxxxxxxxxxxxxxxx'</span> <span class="token comment" spellcheck="true"># 创建oauth application的id和secret</span>
+      <span class="token key atrule">clientSecret</span><span class="token punctuation">:</span> <span class="token string">'xxxxxxxxxxxxxxxxxxxxxxxxxxx'</span>
+    <span class="token key atrule">admin</span><span class="token punctuation">:</span> <span class="token string">'gaobo1112'</span></code></pre>
+</li>
+<li>创建新的<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">OAuth Application</a>，填写规则如下:<pre class=" language-yaml"><code class="language-yaml">  appliaction name<span class="token punctuation">:</span> 随便起
+  HomePage url<span class="token punctuation">:</span> 必须是你博客的地址
+  Authorization callback URL<span class="token punctuation">:</span> 博客的地址</code></pre>
+</li>
+<li><blockquote>
+<p>如果你的存放评论仓库中issue没有一条评论，先添加一条评论。</p>
+</blockquote>
+</li>
 </ul>
 
             </div>
@@ -1214,7 +1240,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8">
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">1.7k</span>
+                <span class="white-color">1.9k</span>
             
             <span id="sitetime"></span>
             
