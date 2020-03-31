@@ -168,7 +168,7 @@ Unicode字符
         <div class="logo-name">苏北之</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+             c++，linux，java
             
         </div>
     </div>
@@ -3868,7 +3868,7 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
 </ul>
 <h3 id="14-8-2-标准库定义的函数对象（Library-Defined-Function-Objects）"><a href="#14-8-2-标准库定义的函数对象（Library-Defined-Function-Objects）" class="headerlink" title="14.8.2 标准库定义的函数对象（Library-Defined Function Objects）"></a>14.8.2 标准库定义的函数对象（Library-Defined Function Objects）</h3><ul>
 <li><p>标准库在头文件functional中定义了一组表示算术运算符、关系运算符和逻辑运算符的类，每个类分别定义了一个执行命名操作的调用运算符。这些类都被定义为模板的形式，可以为其指定具体的应用类型（即调用运算符的形参类型）。</p>
-<img src="/2020/01/09/c++/c++primer/%E8%A1%A814.2.png" class="" title="表14.2.png">)</li>
+<img src="/2020/01/09/c/c-primer/%E8%A1%A814.2.png" class="" title="表14.2.png">)</li>
 <li><p>关系运算符的函数对象类通常被用来替换算法中的默认运算符，这些类对于指针同样适用。</p>
 <pre><code>  vector&lt;string *&gt; nameTable;    // vector of pointers
   // error: the pointers in nameTable are unrelated, so &lt; is undefined
@@ -3879,7 +3879,7 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
 <li><p>调用形式指明了调用返回的类型以及传递给调用的实参类型。不同的可调用对象可能具有相同的调用形式。</p>
 </li>
 <li><p>标准库function类型是一个模板，定义在头文件functional中，用来表示对象的调用形式。</p>
-<img src="/2020/01/09/c++/c++primer/%E8%A1%A814.3.png" class="" title="表14.3.png">)</li>
+<img src="/2020/01/09/c/c-primer/%E8%A1%A814.3.png" class="" title="表14.3.png">)</li>
 <li><p>创建一个具体的function类型时必须提供其所表示的对象的调用形式。</p>
 <pre><code>  // ordinary function
   int add(int i, int j) { return i + j; }
@@ -4563,7 +4563,7 @@ HasPtr&amp; HasPtr::operator=(const HasPtr &amp;rhs)
       return *beg;   // return a reference to an element from the range
   }</code></pre></li>
 <li><p>标准库在头文件type_traits中定义了类型转换模板，这些模板常用于模板元程序设计。其中每个模板都有一个名为type的公有类型成员，表示一个类型。此类型与模板自身的模板类型参数相关。如果不可能（或不必要）转换模板参数，则type成员就是模板参数类型本身。</p>
-<img src="/2020/01/09/c++/c++primer/%E8%A1%A816.1.png" class="" title="表16.1.png">)</li>
+<img src="/2020/01/09/c/c-primer/%E8%A1%A816.1.png" class="" title="表16.1.png">)</li>
 <li><p>使用remove_reference可以获得引用对象的元素类型，如果用一个引用类型实例化remove_reference，则type表示被引用的类型。因为type是一个类的类型成员，所以在模板中必须使用关键字typename来告知编译器其表示一个类型。</p>
 <pre><code>  // must use typename to use a type member of a template parameter
   template &lt;typename It&gt;
@@ -4871,7 +4871,7 @@ ostream&amp; print(ostream&amp;, const int&amp;, const string&amp;, const int&am
   fi.Bar();    // uses our specialization of Foo&lt;int&gt;::Bar()</code></pre></li>
 </ul>
 <h1 id="第17章-标准库特殊设施"><a href="#第17章-标准库特殊设施" class="headerlink" title="第17章 标准库特殊设施"></a>第17章 标准库特殊设施</h1><h2 id="17-1-tuple类型"><a href="#17-1-tuple类型" class="headerlink" title="17.1 tuple类型"></a>17.1 tuple类型</h2><ul>
-<li>tuple是类似pair的模板，定义在头文件tuple中。与pair不同，tuple可以有任意数量的成员。如果希望将一些数据组合成单一对象，但又不想定义新数据结构时，可以使用tuple（“快速而随意”的数据结构）。<img src="/2020/01/09/c++/c++primer/%E8%A1%A817.1.png" class="" title="表17.1.png">)
+<li>tuple是类似pair的模板，定义在头文件tuple中。与pair不同，tuple可以有任意数量的成员。如果希望将一些数据组合成单一对象，但又不想定义新数据结构时，可以使用tuple（“快速而随意”的数据结构）。<img src="/2020/01/09/c/c-primer/%E8%A1%A817.1.png" class="" title="表17.1.png">)
 
 </li>
 </ul>
@@ -4900,10 +4900,10 @@ tuple_element&lt;1, trans&gt;::type cnt = get&lt;1&gt;(item);    // cnt is an in
 <li>tuple的一个常见用途是从一个函数返回多个值。</li>
 </ul>
 <h2 id="17-2-bitset类型"><a href="#17-2-bitset类型" class="headerlink" title="17.2 bitset类型"></a>17.2 bitset类型</h2><h3 id="17-2-1-定义和初始化bitset"><a href="#17-2-1-定义和初始化bitset" class="headerlink" title="17.2.1 定义和初始化bitset"></a>17.2.1 定义和初始化bitset</h3><ul>
-<li>itset类是一个模板，类似array，具有固定的大小。定义一个bitset时需要指明它包含的二进制位数。  <img src="/2020/01/09/c++/c++primer/%E8%A1%A817.2.png" class="" title="表17.2.png">)</li>
+<li>itset类是一个模板，类似array，具有固定的大小。定义一个bitset时需要指明它包含的二进制位数。  <img src="/2020/01/09/c/c-primer/%E8%A1%A817.2.png" class="" title="表17.2.png">)</li>
 <li>使用一个整型值初始化bitset时，此值会被转换为unsigned long long类型并被当作位模式处理。bitset中的二进制位就是此模式的副本。如果bitset的大小大于unsigned long long中的二进制位数，剩余的高位会被置为0。如果bitset的大小小于unsigned long long中的二进制位数，则只使用给定值的低位部分。</li>
 <li>可以使用string或字符数组指针来初始化bitset，字符直接表示位模式。使用字符串表示数时，字符串中下标最小的字符对应bitset的高位。如果string包含的字符数比bitset少，则bitset的高位被置为0。<h3 id="17-2-2-bitset操作"><a href="#17-2-2-bitset操作" class="headerlink" title="17.2.2 bitset操作"></a>17.2.2 bitset操作</h3></li>
-<li>bitset操作：  <img src="/2020/01/09/c++/c++primer/%E8%A1%A817.3.png" class="" title="表17.3.png">)</li>
+<li>bitset操作：  <img src="/2020/01/09/c/c-primer/%E8%A1%A817.3.png" class="" title="表17.3.png">)</li>
 <li>bitset的下标运算符对const属性进行了重载。const版本的下标运算符在指定位置置位时返回true，否则返回false。非const版本返回bitset定义的一个特殊类型，用来控制指定位置的值。</li>
 <li>to_ulong和to_ullong操作用来提取bitset的值。只有当bitset的大小不大于对应操作的返回值（to_ulong为unsigned long，to_ullong为unsigned long long）时，才能使用这两个操作。如果bitset中的值不能存入给定类型，则会引发overflow_error异常。</li>
 <li>bitset的输入运算符从输入流读取字符，保存到临时的string对象中。遇到下列情况时停止读取：<ul>
@@ -4916,7 +4916,7 @@ tuple_element&lt;1, trans&gt;::type cnt = get&lt;1&gt;(item);    // cnt is an in
 <li>读取结束后用临时string对象初始化bitset。如果读取的字符数小于bitset的大小，则bitset的高位被置为0。</li>
 </ul>
 <h2 id="17-3-正则表达式"><a href="#17-3-正则表达式" class="headerlink" title="17.3 正则表达式"></a>17.3 正则表达式</h2><ul>
-<li>正则表达式是一种描述字符序列的方法。C++11新标准增加了正则表达式库（RE库），定义在头文件regex中，包含多个组件。  <img src="/2020/01/09/c++/c++primer/%E8%A1%A817.4.png" class="" title="表17.4.png">)</li>
+<li>正则表达式是一种描述字符序列的方法。C++11新标准增加了正则表达式库（RE库），定义在头文件regex中，包含多个组件。  <img src="/2020/01/09/c/c-primer/%E8%A1%A817.4.png" class="" title="表17.4.png">)</li>
 <li>regex类表示一个正则表达式。<pre><code>  // find the characters ei that follow a character other than c
   string pattern(&quot;[^c]ei&quot;);
   // we want the whole word in which our pattern appears
@@ -4930,7 +4930,7 @@ tuple_element&lt;1, trans&gt;::type cnt = get&lt;1&gt;(item);    // cnt is an in
       cout &lt;&lt; results.str() &lt;&lt; endl;     // print the matching word</code></pre></li>
 <li>regex_match和regex_search函数确定一个给定的字符序列与一个regex是否匹配。如果整个输入序列与表达式匹配，则regex_match函数返回true；如果输入序列中的一个子串与表达式匹配，则regex_search函数返回true。这两个函数的其中一个重载版本接受一个类型为smatch的附加参数。如果匹配成功，函数会将匹配信息保存在给定的smatch对象中。<h3 id="17-3-1-使用正则表达式库"><a href="#17-3-1-使用正则表达式库" class="headerlink" title="17.3.1 使用正则表达式库"></a>17.3.1 使用正则表达式库</h3></li>
 <li>默认情况下，regex使用的正则表达式语言是ECMAScript。</li>
-<li>定义一个regex或者对一个regex调用assign为其赋新值时，可以指定一些标志来影响regex的操作。ECMAScript、basic、extended、awk、grep和egrep这六个标志指定编写正则表达式时所使用的语言。这六个标志中必须设置其中之一，且只能设置一个。默认情况下，ECMAScript标志被设置，regex会使用ECMA-262规范，这也是很多Web浏览器使用的正则表达式语言。  <img src="/2020/01/09/c++/c++primer/%E8%A1%A817.6.png" class="" title="表17.6.png">)</li>
+<li>定义一个regex或者对一个regex调用assign为其赋新值时，可以指定一些标志来影响regex的操作。ECMAScript、basic、extended、awk、grep和egrep这六个标志指定编写正则表达式时所使用的语言。这六个标志中必须设置其中之一，且只能设置一个。默认情况下，ECMAScript标志被设置，regex会使用ECMA-262规范，这也是很多Web浏览器使用的正则表达式语言。  <img src="/2020/01/09/c/c-primer/%E8%A1%A817.6.png" class="" title="表17.6.png">)</li>
 <li>正则表达式的语法是否正确是在运行期间解析的。如果正则表达式存在错误，标准库会抛出类型为regex_error的异常。除了what操作外，regex_error还有一个名为code的成员，用来返回错误类型对应的数值编码。code返回的值是由具体实现定义的。RE库能抛出的标准错误如下，code返回对应错误的编号（从0开始）。</li>
 <li>RE库为不同的输入序列都定义了对应的类型。使用时RE库类型必须与输入类型匹配。<ul>
 <li>regex类保存char类型的正则表达式；wregex保存wchar_t类型的正则表达式。</li>
@@ -5353,7 +5353,7 @@ e3.seed(32767);     // call seed to set a new seed value</code></pre></li>
 <li><p>编译器合成拷贝控制成员时，也会生成一个异常声明。如果所有的成员和基类操作都含有noexcept说明，则合成成员也是noexcept的。</p>
 <h3 id="18-1-5-异常类层次"><a href="#18-1-5-异常类层次" class="headerlink" title="18.1.5 异常类层次"></a>18.1.5 异常类层次</h3></li>
 <li><p>标准库异常类的继承体系：</p>
- <img src="/2020/01/09/c++/c++primer/%E8%A1%A818.1.png" class="" title="表18.1.png">)</li>
+ <img src="/2020/01/09/c/c-primer/%E8%A1%A818.1.png" class="" title="表18.1.png">)</li>
 <li><p>exception类型只定义了拷贝构造函数、拷贝赋值运算符、一个虚析构函数和一个名为what的虚成员。what函数返回一个const char*，指向一个以NULL结尾的字符数组，并且不会抛出异常。</p>
 </li>
 <li><p>exception、bad_cast和bad_alloc类型定义了默认构造函数。runtime_error和logic_error类型没有默认构造函数，但是有一个接受C风格字符串或string类型实参的构造函数，该实参通常用于提供错误信息。what函数返回用于初始化异常对象的错误信息。</p>
@@ -6215,7 +6215,7 @@ extern "C" void print(int);</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaobo1112.github.io/2020/01/09/c++/c++primer/">http://gaobo1112.github.io/2020/01/09/c++/c++primer/</a>
+                    <a href="http://gaobo1112.github.io/2020/01/09/c/c-primer/">http://gaobo1112.github.io/2020/01/09/c/c-primer/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -6450,7 +6450,7 @@ extern "C" void print(int);</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/09/%E5%89%8D%E7%AB%AF/markdown%E6%95%99%E7%A8%8B/">
+                <a href="/2020/01/09/qian-duan/markdown-jiao-cheng/">
                     <div class="card-image">
                         
                         
@@ -6517,7 +6517,7 @@ H2
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <a href="/2020/01/08/qian-duan/bo-ke-da-jian/">
                     <div class="card-image">
                         
                         
@@ -6709,7 +6709,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8">
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">37.6k</span>
+                <span class="white-color">39.3k</span>
             
             <span id="sitetime"></span>
             

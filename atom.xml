@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaobo1112.github.io/"/>
-  <updated>2020-01-09T11:36:22.369Z</updated>
+  <updated>2020-02-20T06:50:32.040Z</updated>
   <id>http://gaobo1112.github.io/</id>
   
   <author>
@@ -17,9 +17,229 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>simulation</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/simulation/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/simulation/</id>
+    <published>2020-02-20T14:50:32.000Z</published>
+    <updated>2020-02-20T06:50:32.040Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>search</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/search/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/search/</id>
+    <published>2020-02-20T14:48:00.000Z</published>
+    <updated>2020-02-20T06:48:00.312Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tree</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/tree/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/tree/</id>
+    <published>2020-02-20T14:47:29.000Z</published>
+    <updated>2020-02-20T06:47:29.719Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>list</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/list/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/list/</id>
+    <published>2020-02-20T14:47:05.000Z</published>
+    <updated>2020-02-20T06:47:05.114Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hashtable</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/hashtable/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/hashtable/</id>
+    <published>2020-02-20T14:46:36.000Z</published>
+    <updated>2020-02-20T06:46:36.544Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>graph</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/graph/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/graph/</id>
+    <published>2020-02-20T14:46:11.000Z</published>
+    <updated>2020-02-20T06:46:11.860Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>geometry</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/geometry/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/geometry/</id>
+    <published>2020-02-20T14:45:40.000Z</published>
+    <updated>2020-02-20T06:45:40.178Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>分治</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/fen-zhi/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/fen-zhi/</id>
+    <published>2020-02-20T14:44:25.000Z</published>
+    <updated>2020-02-20T06:44:25.275Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>binary_search</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/binary-search/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/binary-search/</id>
+    <published>2020-02-20T14:41:47.000Z</published>
+    <updated>2020-02-20T06:41:47.284Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>array</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/array/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/array/</id>
+    <published>2020-02-20T14:40:55.000Z</published>
+    <updated>2020-02-22T01:16:58.676Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;leetcode 1352&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关键是使用数组记录前面所有数的乘积，注意0的特殊情况，等于0的时候要讲数组清零，然后设为1。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;leetcode
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://gaobo1112.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="数组,leetcode" scheme="http://gaobo1112.github.io/tags/%E6%95%B0%E7%BB%84-leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题目总结</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/</id>
+    <published>2020-02-20T12:28:52.000Z</published>
+    <updated>2020-02-22T02:55:12.981Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;c&quot;&gt;&lt;a href=&quot;#c&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://gaobo1112.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="c++,算法" scheme="http://gaobo1112.github.io/tags/c-%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件io</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/linux/wen-jian-io/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/linux/wen-jian-io/</id>
+    <published>2020-02-20T09:55:09.000Z</published>
+    <updated>2020-02-20T04:27:27.527Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;文件io&quot;&gt;&lt;a href=&quot;#文件io&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="c++" scheme="http://gaobo1112.github.io/categories/c/"/>
+    
+    
+      <category term="linux" scheme="http://gaobo1112.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>markdown教程</title>
-    <link href="http://gaobo1112.github.io/2020/01/09/%E5%89%8D%E7%AB%AF/markdown%E6%95%99%E7%A8%8B/"/>
-    <id>http://gaobo1112.github.io/2020/01/09/%E5%89%8D%E7%AB%AF/markdown%E6%95%99%E7%A8%8B/</id>
+    <link href="http://gaobo1112.github.io/2020/01/09/qian-duan/markdown-jiao-cheng/"/>
+    <id>http://gaobo1112.github.io/2020/01/09/qian-duan/markdown-jiao-cheng/</id>
     <published>2020-01-09T14:31:18.000Z</published>
     <updated>2020-01-09T11:36:22.369Z</updated>
     
@@ -48,8 +268,8 @@
   
   <entry>
     <title>c++ primer 学习笔记</title>
-    <link href="http://gaobo1112.github.io/2020/01/09/c++/c++primer/"/>
-    <id>http://gaobo1112.github.io/2020/01/09/c++/c++primer/</id>
+    <link href="http://gaobo1112.github.io/2020/01/09/c/c-primer/"/>
+    <id>http://gaobo1112.github.io/2020/01/09/c/c-primer/</id>
     <published>2020-01-09T11:19:17.000Z</published>
     <updated>2020-01-09T13:37:06.377Z</updated>
     
@@ -75,10 +295,10 @@
   
   <entry>
     <title>博客搭建</title>
-    <link href="http://gaobo1112.github.io/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    <id>http://gaobo1112.github.io/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <link href="http://gaobo1112.github.io/2020/01/08/qian-duan/bo-ke-da-jian/"/>
+    <id>http://gaobo1112.github.io/2020/01/08/qian-duan/bo-ke-da-jian/</id>
     <published>2020-01-08T11:19:17.000Z</published>
-    <updated>2020-01-09T13:13:11.237Z</updated>
+    <updated>2020-01-10T01:43:50.077Z</updated>
     
     <summary type="html">
     

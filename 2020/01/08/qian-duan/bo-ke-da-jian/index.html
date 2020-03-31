@@ -150,7 +150,7 @@
         <div class="logo-name">苏北之</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+             c++，linux，java
             
         </div>
     </div>
@@ -405,21 +405,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-01-09
+                    2020-01-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -458,7 +458,10 @@
 <li>生成博客:<code>hexo init</code>。</li>
 <li>在本地运行hexo : <code>hexo s</code> 或者 <code>hexo server</code>。</li>
 <li>在本地浏览器打开localhost:4000就可以看到博客了。</li>
-<li>创建新的文章：<code>hexo n &quot;first article&quot;</code>或者<code>hexo new &quot; &quot;</code>,文章存在的地址是<code>source\_posts</code>目录下。可以直接修改，编写即可。</li>
+<li>创建新的文章：<code>hexo n &quot;first article&quot;</code>或者<code>hexo new &quot; &quot;</code>,文章存在的地址是<code>source\_posts</code>目录下。可以直接修改，编写即可。<ul>
+<li>添加文件的时候指定路径 -p <code>hexo n -p c++/test.md &quot;test&quot;</code></li>
+</ul>
+</li>
 <li>生成静态文件:<code>hexo g</code>或者<code>hexo generate</code>。</li>
 </ol>
 <h3 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h3><ol>
@@ -746,6 +749,31 @@
 {% asset_img slug [title] %}
 {% asset_img 图片名称 [图片说明] %}
 {% asset_link slug [title] %}</code></pre>
+<h4 id="添加卡通人物"><a href="#添加卡通人物" class="headerlink" title="添加卡通人物"></a>添加卡通人物</h4><ul>
+<li>下载安装<a href="https://github.com/EYHN/hexo-helper-live2d" target="_blank" rel="noopener">live2d</a>:</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save hexo-helper-live2d </code></pre>
+<ul>
+<li>下载安装<a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">live2d-widget-models</a>，这里选择<code>karuto</code>作为实例。更多的<a href="https://huaji8.top/post/live2d-plugin-2.0/" target="_blank" rel="noopener">模型地址</a>。</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> live2d-widget-model-haruto</code></pre>
+<ul>
+<li>修改<code>_config.yml</code>。</li>
+</ul>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">live2d</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">scriptFrom</span><span class="token punctuation">:</span> local
+    <span class="token key atrule">model</span><span class="token punctuation">:</span> 
+        <span class="token key atrule">use</span><span class="token punctuation">:</span> live2d<span class="token punctuation">-</span>widget<span class="token punctuation">-</span>model<span class="token punctuation">-</span>haruto <span class="token comment" spellcheck="true">#模型选择</span>
+    <span class="token key atrule">display</span><span class="token punctuation">:</span> 
+        <span class="token key atrule">position</span><span class="token punctuation">:</span> right  <span class="token comment" spellcheck="true">#模型位置</span>
+        <span class="token key atrule">width</span><span class="token punctuation">:</span> <span class="token number">150       </span><span class="token comment" spellcheck="true">#模型宽度</span>
+        <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">300      </span><span class="token comment" spellcheck="true">#模型高度</span>
+    <span class="token key atrule">mobile</span><span class="token punctuation">:</span> 
+        <span class="token key atrule">show</span><span class="token punctuation">:</span> <span class="token boolean important">false      </span><span class="token comment" spellcheck="true">#是否在手机端显示</span></code></pre>
+<blockquote>
+<p>注意：如果选择使用haru模型，下载命令是<code>npm install --save live2d-widget-model-haru</code>,并且要将node_modules/_live2d-widget-model-haru…中的json文件分别移到子文件加01和02中。原来01和02的json文件是空的，不做这个操作会报错。</p>
+</blockquote>
 
             </div>
             <hr/>
@@ -771,7 +799,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaobo1112.github.io/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">http://gaobo1112.github.io/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a>
+                    <a href="http://gaobo1112.github.io/2020/01/08/qian-duan/bo-ke-da-jian/">http://gaobo1112.github.io/2020/01/08/qian-duan/bo-ke-da-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1006,7 +1034,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/01/09/c++/c++primer/">
+                <a href="/2020/01/09/c/c-primer/">
                     <div class="card-image">
                         
                         
@@ -1083,7 +1111,7 @@ Unicode字符
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/08/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <a href="/2020/01/08/qian-duan/bo-ke-da-jian/">
                     <div class="card-image">
                         
                         
@@ -1276,7 +1304,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8">
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">37.6k</span>
+                <span class="white-color">39.3k</span>
             
             <span id="sitetime"></span>
             
