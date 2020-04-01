@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="binary_search, c++,java,后台开发">
-    <meta name="description" content="binary_search | 苏北之">
+    <meta name="keywords" content="动态规划, c++,java,后台开发">
+    <meta name="description" content="动态规划解决步骤1. 首先明确dp数组所存放数据的意义。
+2. 根据dp数组的含义，运用数学归纳法的思想，假设dp[0...n-1]已知怎么求出dp[n]的值。
+3. 最后想一下base case 是什么，然后从初始化数组。保证算法的正确运">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>binary_search | 苏北之</title>
+    <title>动态规划 | 苏北之</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -241,12 +243,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">binary_search</h1>
+                    <h1 class="description center-align post-title">动态规划</h1>
                 </div>
             </div>
         </div>
@@ -375,21 +377,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-20
+                    2020-03-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-20
+                    2020-03-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    331
                 </div>
                 
 
@@ -412,7 +414,95 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="动态规划解决步骤"><a href="#动态规划解决步骤" class="headerlink" title="动态规划解决步骤"></a>动态规划解决步骤</h3><pre><code>1. 首先明确dp数组所存放数据的意义。
+2. 根据dp数组的含义，运用数学归纳法的思想，假设dp[0...n-1]已知怎么求出dp[n]的值。
+3. 最后想一下base case 是什么，然后从初始化数组。保证算法的正确运行。</code></pre><h3 id="二分查找的框架"><a href="#二分查找的框架" class="headerlink" title="二分查找的框架"></a>二分查找的框架</h3><pre><code>```cpp
+int binarySearch(int[] num,int target)
+{
+    int left = 0,right = ...;
+    while(...)
+    {
+        int mid = left+(right-left)/2;
+        if(nums[mid] == target){
+            ...
+        }else if(nums[mid] &lt; target){
+            left = ...
+        }else if(nums[mid] &gt; target){
+            right = ...
+        }
+    }
+    return ...;
+}
+```
+
+- 基本二叉查找算法
+
+```cpp
+int binarySearch(int[] num,int target){
+    int left = 0,right = num.length() -1;
+    while(left&lt;=right)
+    {
+        int mid = left + (right -left) /2 ;
+        if(nums[mid]==target){
+            return mid;
+        }else if(nums[mid]&lt;target){
+            left = mid + 1;
+        }esle if(nums[mid] &gt; target){
+            right = mid -1;
+        }
+    }
+    return -1;
+}
+```
+
+- 寻找左侧边界的二叉树
+
+```cpp
+int binarySearch(int[] nums, int target){
+    int left = 0,right = nums.length() - 1;
+    while(left &lt;= right){
+        mid = left + (right - left) / 2;
+        if(nums[mid] == target){
+            right = mid - 1;
+        }else if(nums[mid] &lt; target){
+            left = mid + 1;
+        }else if(nums[mid] &gt; target){
+            right = mid -1;
+        }
+    }
+    if(left == nums.length() || nums[left] != target)return -1;
+    return nums[left];
+}
+``` 
+
+- 寻找右侧边界的二叉树
+
+```cpp
+int binarySearch(int[] nums, int target){
+    int left = 0,right = nums.length() - 1;
+    while(left &lt;= right){
+        mid = left + (right - left) / 2;
+        if(nums[mid] == target){
+            left = mid + 1;
+        }else if(nums[mid] &lt; target){
+            left = mid + 1;
+        }else if(nums[mid] &gt; target){
+            right = mid -1;
+        }
+    }
+    if(right &lt; 0  || nums[right] != target)return -1;
+    return nums[right];
+}
+``` 
+
+
+int main()
+{
+
+
+}
+
+# </code></pre>
             </div>
             <hr/>
 
@@ -437,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://gaobo1112.github.io/2020/02/20/suan-fa/binary-search/">http://gaobo1112.github.io/2020/02/20/suan-fa/binary-search/</a>
+                    <a href="http://gaobo1112.github.io/2020/03/06/suan-fa/dong-tai-gui-hua/">http://gaobo1112.github.io/2020/03/06/suan-fa/dong-tai-gui-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -643,7 +733,7 @@
         repo: 'gaobo1112.github.io',
         owner: 'gaobo1112',
         admin: "gaobo1112",
-        id: '2020-02-20T14-41-47',
+        id: '2020-03-06T15-02-44',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -664,29 +754,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/20/suan-fa/fen-zhi/">
+                <a href="/2020/03/06/suan-fa/dong-tai-gui-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="分治">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="动态规划">
                         
-                        <span class="card-title">分治</span>
+                        <span class="card-title">动态规划</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            动态规划解决步骤1. 首先明确dp数组所存放数据的意义。
+2. 根据dp数组的含义，运用数学归纳法的思想，假设dp[0...n-1]已知怎么求出dp[n]的值。
+3. 最后想一下base case 是什么，然后从初始化数组。保证算法的正确运
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -695,6 +788,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -897,7 +991,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8">
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">39.3k</span>
+                <span class="white-color">43.2k</span>
             
             <span id="sitetime"></span>
             

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="面试题目总结, c++,java,后台开发">
     <meta name="description" content="c++
-static关键字的用法有哪些？
+static关键字的用法有哪些?
 
 修饰局部变量，修改了变量的生命周期，在函数第一次被调用的时候被初始化，之后会一直保存这个值，有点类似全局变量了。
 
@@ -400,21 +400,21 @@ static关键字的用法有哪些？
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-22
+                    2020-03-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    792
+                    4.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    15 分
                 </div>
                 
 
@@ -430,8 +430,8 @@ static关键字的用法有哪些？
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="c"><a href="#c" class="headerlink" title="c++"></a>c++</h3><ol>
-<li><p>static关键字的用法有哪些？</p>
+                <h2 id="c"><a href="#c" class="headerlink" title="c++"></a>c++</h2><ol>
+<li><p>static关键字的用法有哪些?</p>
 <ul>
 <li><p>修饰局部变量，修改了变量的生命周期，在函数第一次被调用的时候被初始化，之后会一直保存这个值，有点类似全局变量了。</p>
 </li>
@@ -442,7 +442,7 @@ static关键字的用法有哪些？
 <li><p>修饰成员变量，所有对象共享该变量。且不需要生成对象就可以访问该变量。</p>
 </li>
 <li><p>修饰成员函数，不用生成对象就可以访问该函数，但是在静态成员函数内，只能访问静态变量。</p>
-<p>static关键字的作用？</p>
+<p>static关键字的作用?</p>
 </li>
 <li><p>对作用域进行隐藏，编译多个文件的时候，没有加static的变量全局可见，加了static的对象只能当前文件可见。</p>
 </li>
@@ -454,7 +454,7 @@ static关键字的用法有哪些？
 </li>
 </ul>
 </li>
-<li><p>继承和组合的的概念，什么时候用继承，什么时候用组合？</p>
+<li><p>继承和组合的的概念，什么时候用继承，什么时候用组合?</p>
 <ul>
 <li>继承是通过扩展已有类来获得新的类的方法。</li>
 <li>组合是有已有类的对象构建新的类的方法。</li>
@@ -463,15 +463,1006 @@ static关键字的用法有哪些？
 <li>注意，如果没有特殊需求使用组合的方式，如果使用继承就需要将类的所有东西都继承。</li>
 </ul>
 </li>
-<li><p>c++菱形布局会发生什么，画出对应的内存布局。</p>
+<li><p>c++菱形布局会发生什么，画出对应的内存布局?</p>
 <ul>
 <li>c++菱形继承是指，有两个类b，c派生自同一个类a,同时d类继承b，c两个类。</li>
 <li>出现问题，如果基类中有一个方法，则在d类中保存了两个该方法，如果调用就会出现指向不明确的问题。</li>
 <li>解决方法，一个是使用域限定解决，指定所要调用的是哪个类中的函数。另一个解决方法就是使用虚继承。</li>
-<li>内存布局。虚继承中多了一个vbptr，vbptr指的是虚基类表指针（virtual base table pointer），该指针指向了一个虚表（virtual table），虚表第一部分存储的是对象相对于存放vptr指针的偏移量；第二项是vbptr到共有基类元素之间的偏移量。</li>
+<li>内存布局。虚继承中多了一个vbptr，vbptr指的是虚基类表指针（virtual base table pointer），该指针指向了一个虚表（virtual table），虚表第一部分存储的是对象相对于存放vptr指针的偏移量；第二项是vbptr到共有基类元素之间的偏移量。<img src="/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/%E8%99%9A%E7%BB%A7%E6%89%BF%E5%86%85%E5%AD%98%E5%88%86%E5%B8%83.jpg" class="" title="虚继承内存布局">
+</li>
+</ul>
+</li>
+<li><p>说说对智能指针的了解?</p>
+<ul>
+<li><p>RAII机制(背景知识)：定义一个类来完成资源的释放和分配，在构造函数中完成资源的分配和初始化操作，在析构函数中完成资源的清理工作。从而保证资源的正确初始化和释放。智能指针是一种RAII机制的应用，所以智能指针本质上可以看做是一个类。将基本类型指正封装为类对象指针，并在析构函数中编写delete语句删除指针对象所指向的空间。</p>
+</li>
+<li><p>c++智能指针简单介绍</p>
+<ul>
+<li><p>STL提供了四种智能指针<code>auto_ptr</code>,<code>unique_ptr</code>,<code>shared_ptr</code>,<code>weak_ptr</code>。</p>
+</li>
+<li><p>auto_ptr是c++98提供的解决方案，c++11已经弃用。</p>
+</li>
+<li><p><strong>使用注意点</strong></p>
+<ul>
+<li><p>所有智能指针都有一个explicit构造函数，以指针作为参数，所以不能自动将指针转化为智能指针，必须显示调用。</p>
+<pre class=" language-cpp"><code class="language-cpp">  <span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token class-name">T</span><span class="token operator">></span>
+  <span class="token keyword">class</span> <span class="token class-name">auto_ptr</span>
+  <span class="token punctuation">{</span>
+      <span class="token keyword">explicit</span> <span class="token function">auto_ptr</span><span class="token punctuation">(</span>T <span class="token operator">*</span>p<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  shared_ptr<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span> pd<span class="token punctuation">;</span>
+  <span class="token keyword">double</span> <span class="token operator">*</span>p_reg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">double</span><span class="token punctuation">;</span>
+  pd <span class="token operator">=</span> p_reg<span class="token punctuation">;</span>                             <span class="token comment" spellcheck="true">//not allowed(implicit conversion)        </span>
+  pd <span class="token operator">=</span> shared_ptr<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span><span class="token punctuation">(</span>p_reg<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment" spellcheck="true">//allowed(explicite conversion)        </span>
+  shared_ptr<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span> pshared <span class="token operator">=</span> p_reg<span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//not allowed(implicit conversion)        </span>
+  shared_ptr<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span> <span class="token function">pshared</span><span class="token punctuation">(</span>p_reg<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//allowed(explicite conversion)        </span></code></pre>
+</li>
+<li><p>对所有智能智能都应该避免在创建对象的时候不是在堆上创建对象。当ptr过期的时候程序会将delete作用在非堆的内存，会出现错误。</p>
+<pre class=" language-cpp"><code class="language-cpp">  string <span class="token function">str</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  shared_ptr<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token function">ptr</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>为什么摒弃auto_ptr?</p>
+<pre class=" language-cpp"><code class="language-cpp">  auto_ptr<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token function">ps</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token function">string</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  auto_ptr<span class="token operator">&lt;</span>string<span class="token operator">></span> vocation<span class="token punctuation">;</span>
+  vocation <span class="token operator">=</span> ps<span class="token punctuation">;</span></code></pre>
+<ul>
+<li>如果两个指针是常规指针，则两个指针将指向同一个string对象。所以当程序将删除同一个对象两次。解决方法如下：<ul>
+<li>定义赋值运算符，将之执行深赋值，这样两个指针将指向不同的对象。缺点是会浪费空间，所以只能指针都没有采用这种策略。</li>
+<li>创建所有权的概念，对特定的对象，只有一个智能指针可以拥有。这样只拥有对象的智能指针的构造函数会删除该对象，这是auto_ptr和uniqie_ptr的策略，但是unique_ptr的策略更加严格。</li>
+<li>创建智能更高的指针，跟踪引用特定对象的智能指针数，这称之为引用计数。这也是shared_ptr采用的策略。</li>
+</ul>
+</li>
+<li>为什么放弃auto_ptr，避免潜在的内存崩溃的问题，如果将一个auto_ptr赋值给另一个auto_ptr,若在使用原来的auto_ptr就会发生运行期间错误(访问了空的指针)，但是使用unique_ptr不会出现这个问题，因为无法编译通过。</li>
+</ul>
+</li>
+<li><p>unique_str为什么优于auto_ptr?</p>
+<ul>
+<li><p>unique_ptr不运行将一个智能指针赋值给另一个智能指针，防止出现上面的编译问题。</p>
+</li>
+<li><p>当编译器将一个unique_ptr赋值给另一个时，若原来的unique_ptr是一个临时的右值，编译器允许这样做，但是如果unique_ptr存在过一段时间，编译器将禁止这样做。</p>
+<pre class=" language-cpp"><code class="language-cpp">  unique_ptr<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token function">pu1</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token function">string</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  unique_ptr<span class="token operator">&lt;</span>string<span class="token operator">></span> pu2<span class="token punctuation">;</span>
+  pu2 <span class="token operator">=</span> pu1<span class="token punctuation">;</span>                  <span class="token comment" spellcheck="true">//not allowed</span>
+  unique_ptr<span class="token operator">&lt;</span>string<span class="token operator">></span> pu3<span class="token punctuation">;</span>
+  pu3 <span class="token operator">=</span> unique_ptr<span class="token operator">&lt;</span>string<span class="token operator">></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token function">string</span><span class="token punctuation">(</span><span class="token string">"you"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// allowed</span></code></pre>
+</li>
+</ul>
+</li>
+<li><p>如何选用智能指针?</p>
+<ul>
+<li>如果程序使用多个指向同一个对象的指针，应该选择shared_ptr。</li>
+<li>如果程序不需要多个指向同一个对象的指针，可以使用unique_str。</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
+<ul>
+<li><p>虚函数的实现机制?</p>
+<ul>
+<li><p>什么是虚函数：<br>  虚函数是在类中有virtual关键字声明的成员函数，并且每一个含有虚函数的类都至少有一个与之对应的虚函数表，其中存放着该类所有虚函数对应的函数指针。</p>
+<pre class=" language-cpp"><code class="language-cpp">  <span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+      <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+      <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token operator">:</span> <span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+      <span class="token keyword">int</span> b <span class="token punctuation">;</span>
+      <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">quz</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>A的虚函数表中存放着foo和bar两个函数指针。</li>
+<li>B的虚函数表中放继承自A的函数bar，也有重写的函数foo，还有新增的函数quz。</li>
+<li>所有虚函数地址都会存放在所属类的虚函数表vtbl中，另外在基类中声明为虚函数的成员方法，达到子类是仍然是虚函数，即使子类中重新定义基类虚函数时未使用virtual修饰，该函数地址仍会放在子类的虚函数表vtbl中。</li>
+</ul>
+</li>
+<li><p>虚函数表是怎么构造和继承的?</p>
+<ul>
+<li>基类虚函数表的构造:按照虚函数声明的顺序将这些函数地址放入虚函数表中。</li>
+<li>子虚函数的构造和继承:将基类的虚函数表赋值到子类的虚函数表中，如果子类重写了父类的虚函数，则虚函数表就需要改变，否则不需要改变，如果新增了虚函数，将新增的函数地址加到虚函数表的后面。</li>
+</ul>
+</li>
+<li><p>虚函数的调用过程，虚函数表示如何访问的?</p>
+<pre class=" language-cpp"><code class="language-cpp">  Base<span class="token operator">::</span><span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Extend<span class="token operator">::</span><span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Extend ext<span class="token punctuation">;</span>
+  Base <span class="token operator">*</span>pBase <span class="token operator">=</span> <span class="token operator">&amp;</span>ext<span class="token punctuation">;</span>
+  pBase<span class="token operator">-</span><span class="token operator">></span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li><p>当调用pBase-&gt;show();的执行步骤:</p>
+<ol>
+<li>判断base类中show是否是虚函数。</li>
+<li>如果不是虚函数，寻找base::show()。如果是虚函数执行下一步。</li>
+<li>访问pbase所指对象的虚函数表指针得到pbase所指对象所在类的虚函数表。</li>
+<li>查找base中show()在声明的时候的位序x，到步骤三得到的虚函数表中找到位序x，从而得到要执行show函数的地址。</li>
+<li>根据函数地址和base中声明的show的函数类型访问所指行的函数。</li>
+</ol>
+</li>
+<li><p>多态产生的原因?<br>  如果子类没有重写父类的虚函数，那么子类虚函数表中存放的是父类的虚函数，如果重写了虚函数那么存放的就是重写后的虚函数，所以事先了多态的功能。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>如果父类中仅有方法，子类中只有一个int变量，那么sizeof大小是多少?</p>
+<ul>
+<li>父类的大小是1，子类的大小是4。类的实例化，所谓类的实例化就是在内存中分配一块地址，每个实例在内存中都有独一无二的地址。同样空类也会被实例化，所以编译器会给空类隐含的添加一个字节，这样空类实例化之后就有了独一无二的地址了。所以空类的sizeof为1。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>指针一定是4个字节大小吗?</p>
+<ul>
+<li>不一定，根据 不同的操作系统，指针的大小可能会不一样，64位才做系统指针的大小是8字节，而32位操作系统指针的大小只有4个字节。、</li>
+</ul>
+</li>
+<li><p>#define和inline函数的区别是什么?</p>
+<ul>
+<li>内联函数在编译时展开，而宏是由预处理器对宏进行展开</li>
+<li>内联函数会检查参数类型，宏定义不检查函数参数 ，所以内联函数更安全。</li>
+<li>宏不是函数，而inline函数是函数</li>
+<li>宏在定义时要小心处理宏参数，（一般情况是把参数用括弧括起来）</li>
+</ul>
+</li>
+<li><p>const static 在哪里初始化?</p>
+<ul>
+<li>const定义的常量在超出其作用域之后其空间会被释放，而static定义的静态常量在函数执行后不会释放其存储空间.</li>
+<li>static静态成员变量不能在类的内部初始化，在类的内部只是声明，定义必须在类定义体的外部，通常在类的实现文件中初始化，比如：double Account::Rate = 2.25，static关键字只能用于类定义体内部的声明中，并且在外部定义时不能标识为static</li>
+<li>const成员变量也不能在类定义处初始化，只能通过构造函数初始化列表进行，并且必须有构造函数,const成员变量只在某个对象生存期内是常量，而对于整个类而言却可变的。因为类可以创建多个对象，不同的对象其const数据成员的值可以不同，所以不能在类的声明中初始化const数据成员，因为类的对象没有被创建时，编译器不知道const数据成员的值是什么。</li>
+<li>const成员函数的主要目的是防止成员函数修改对象内容，即const成员函数不能修改成员变量的值，但是可以访问成员变量</li>
+<li>static成员函数的主要目的是作为类作用域的全局函数，不能访问类的非静态数据成员，因为类的静态成员函数没有this指针，这导致：1.不能直接存取类的非静态成员变量，调用非静态成员函数，2.不能被声明为虚函数(没有this指针，实现不了多态，定义为虚函数没有意义）.</li>
+<li>类的static const变量必须在类外部进行初始化。</li>
+</ul>
+</li>
+<li><p>派生类的构造函数和析构函数执行顺序?</p>
+<ul>
+<li>构造函数是基类行进行构造，派生类再进行构造，析构函数是派生类行进行析构，然后基类在进行析构。同时无需手动析构基类在析构派生类的时候回析构基类的。</li>
+<li>编译器会在派生类的析构函数中添加基类析构函数的语句，所以我们可以不写，其实也是调用了基类的析构函数。</li>
+</ul>
+</li>
+<li><p>什么时候派生类类的析构函数不会被调用?</p>
+<ul>
+<li>当基类的析构函数不是虚函数的时候，并且一个基类的指针指向一个派生类的对象的时候，基类的析构函数不会被调用，发生内存泄漏。</li>
+</ul>
+</li>
+<li><p>如何生成静态库和动态库?</p>
+<ul>
+<li>使用gcc生成静态库的方法：<ul>
+<li>生成.o文件，使用<code>gcc -c test.c -o test.o</code></li>
+<li>使用ar将test.o打包成为libtest.a文件，使用<code>ar rcs -o libtest.a test.o</code></li>
+<li>编译main.c,并使用libtest.a静态文件，使用命令<code>gcc -o app_static main.c -L. libtest.a</code>或者<code>gcc -o appstatic main.c libtest.a</code></li>
+</ul>
+</li>
+<li>使用gcc生成动态库的方法:<ul>
+<li>生成test.o目标文件，使用如下命令。在此处需要添加-fPIC参数，该参数用于生成位置无关代码已工生成动态库使用，使用命令：<code>gcc -c -o test.o -fPIC test.c</code>。</li>
+<li>使用-shared参数生成动态库，使用如下命令：<code>gcc -shared -o libmyshare.so test.o</code> ,上面的两个命令可以连起来用<code>gcc -shared -fPIC -o libmyushared.so test.c</code></li>
+<li>编译main.c,使用动态链接库，使用如下命令:<code>gcc -o app_share main.c -L. libmyshare.so</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>如何使用gdb调试?</p>
+<ul>
+<li>新建一个源文件<code>test.cpp</code>.</li>
+<li>生成有可调试信息的可执行文件，<code>g++ -g -o test test.cpp</code>。</li>
+<li>启动gdb调试，<code>gdb test</code><ul>
+<li>查看源文件<code>list or l</code>,重复命令按回车键。</li>
+<li>设置调试断电<code>break 16</code>,查看断点信息<code>info break</code>。</li>
+<li>运行<code>run</code>。</li>
+<li>单步调试，<code>step</code>进入函数内部</li>
+<li>主过程调试，<code>next</code></li>
+<li>查看变量，<code>print a</code>。</li>
+<li>设置变量的值: <code>set var a=100</code></li>
+<li>bt查看函数栈针和层级关系(backtrace)。</li>
+<li><code>frame</code>切换函数的栈针。</li>
+<li><code>finish</code>结束当前函数返回函数的调用点。</li>
+<li>继续到下一个断点<code>continue</code>。</li>
+<li>退出<code>q</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>coredunmp查看core文件分析？</p>
+<ul>
+<li>core文件是程序奔溃的时候产生的文件，里面会有变量的值，方便调试。</li>
+<li>为什么使用coredump：在编程的过程中，可能会产生段错误，也就是访问了错误的内存段，这时候编译错误不会提醒到哪一行，是的调试变得较为困难，这时候断错误存储的core错误文件就可以派上用场了。</li>
+<li>配置：直接在shell中输入<code>ulimit -c unlimited</code>,或者在<code>.bashrc</code>文件中添加<code>ulimit -c unlimited</code></li>
+<li>产生段错误，访问非法内存，编译的时候要加上-g选项。</li>
+<li>查看core dump: <code>gdb [exec file] [core file]</code>,使用<code>bt</code>命令查看程序运行到了那个地方。</li>
+<li>bt可以显示函数的调用栈，f num可以打印num栈的信息。</li>
+</ul>
+</li>
+<li><p>如何调试运行中的程序?</p>
+<ul>
+<li>编译带-g的选项。</li>
+<li>运行程序。</li>
+<li>ps找到进程号。</li>
+<li>启动gdb，使用attach选项进程，这时候gdb会停止在程序的某处。</li>
+<li>按照gdb调试的方法调试，调试完成仍然可以使用run命令重启程序。</li>
+</ul>
+</li>
+<li><p>运行了几天的程序放生错误，怎么解决问题?</p>
+<ul>
+<li>创建一个调试的版本并使用它，然后确保程序崩溃的时候创建了core文件，然后用gdb查看core文件发现问题所在。</li>
+</ul>
+</li>
+<li><p>如何编写makefile?</p>
+<ul>
+<li><p>makefile的好处:</p>
+<ul>
+<li>项目代码编译管理</li>
+<li>节省编译时间(只会编译修改过的文件)</li>
+<li>一次编写一直可以用。</li>
+</ul>
+</li>
+<li><p>三要素：目标、条件、命令</p>
+<pre class=" language-Makefile"><code class="language-Makefile">  #目标:依赖(条件)
+  #   命令
+  #阶段一
+  all:add.c sub.c dive.c mul.c main.c
+      gcc add.c sub.c dive.c mul.c main.c -o app
+
+  #阶段二
+  app:add.o sub.o dive.o mul.o main.o
+      gcc add.o sub.o dive.o mul.o main.o -o app
+
+  add.o:add.c
+      gcc -c add.c
+  sub.o:sub.c
+      gcc -c sub.c
+  dive.o:dive.c
+      gcc -c dive.c
+  mul.o:mul.c
+      gcc -c mul.c
+  main.o:main.c
+      gcc -c main.c
+
+  .PHONY:clean
+  clean:
+      -rm -rf *.o
+      -rm -rf app
+
+  hello:
+      @echo "hello"
+  #makefile通过文件的时间来判读是否需要重新编译文件
+  #如果目标不存在依赖，则执行对应的命令，进行更新。如make clean
+  #.PHONY用来生伪为目标，用来解决如果当前文件下有同名的文件，不会生效的问题。
+  #-表示即使当前命令出错也会继续向下执行命令
+  #@表示输出中不会出现命令的语句，只会有命令执行的结果。
+
+  #阶段三
+  #obj=add.o sub.o dive.o main.o
+  src = $(wildcard *.c)
+  obj = $(patsubst %.c %.o $(src))
+  target = app
+  $(target):$(obj)
+      gcc $^ -o $@ 
+
+  %.o:%.c
+      gcc -c %< -o $@
+  #obj是定义的变量，如果引用变量使用$()符号，虽然app是依赖于.o文件，但是会自动寻找.o的依赖文件.c，这里是makefile内建语法规则实现的。 
+  #$@表示所以后目标，$^表示所有依赖，$<表示依赖的第一个
+  #wildcard是内置函数寻找符合条件的文件。patsubst对文件名进行替换。
+
+  #阶段四
+  #cppflages指定头文件在拿个目录 
+  CPPFLAGS= iIinclude
+  #cflags是调试信息
+  CFLAGES= -g -Wall
+  #ldflage是连接库的地址
+  LDFLAGE= 
+  #cc是编译器
+  CC=gcc
+
+  src = $(wildcard *.c)
+  obj = $(patsubst %.c %.o $(src))
+  target = app
+  $(target):$(obj)
+      gcc $^ $(LDFLAGS) -o $@ 
+
+  %.o:%.c
+      gcc -c %< $(CFLAGS) $(CPPFLAGS) -o $@
+
+  #.config可以生成makefile文件，然后再调用make进行编译。    </code></pre>
+</li>
+</ul>
+</li>
+<li><p>编译器的编译过程？链接的时候做了什么事？在中间层优化时怎么做?</p>
+<ul>
+<li>编译器的编译过程：预处理，编译和优化,汇编，链接。<ul>
+<li>预处理:将程序中引用的头文件包含到源代码中，并对一些宏进行替换。</li>
+<li>编译和优化:将用户可识别的语言翻译成一组处理器可以识别的操作码，生成目标文件，通常翻译成汇编语言。</li>
+<li>汇编:将汇编输出的汇编代码翻译成符合一定条件的机器代码，在linux系统一般表现为.obj文件。</li>
+<li>链接:将所有的.o文件系统的obj文件和动态库文件链接起来，就可以形成可执行文件了。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>STL各容器如何实现?</p>
+<ul>
+<li>vector:底层数据结构为数组，支持快速随机访问。</li>
+<li>list:双向列表，支持快速增删。</li>
+<li>deque(双端队列):底层数据结构为一个中央控制器器和多个缓冲区。支持收尾快速删除也支持随机访问。</li>
+<li>stack:底层一般用list或deque实现，封闭头部即可，不用vector的原因是容量大小有限制，扩容耗时。</li>
+<li>queue:底层一般用list或deque实现，封闭头部即可。</li>
+<li>priority_queue的底层数据结构是vector,堆heap为处理规则来管理底层容器实现。</li>
+<li>set底层为红黑树，有序，不可重复。</li>
+<li>multiset底层红黑树，有序，可重复。</li>
+<li>map底层为红黑树，有序，不重复。</li>
+<li>multimap底层为红黑树，有序，可重复。</li>
+<li>hash_set底层为hash表，无序，不重复。</li>
+<li>hash_multiset底层为hash表，无序，可重复。</li>
+<li>hash_map底层hash表</li>
+<li>hash_multimap底层hash表</li>
+</ul>
+</li>
+<li><p>适配器是用来做什么的?</p>
+<ul>
+<li>容器适配器:具体的有stack，queue，priority_queue，默认情况下，stack和queue是deque实现的，priority_queue在vector上实现的。</li>
+<li>迭代适配器:插入器是一种迭代实配去，带有一个容器参数，并生成一个迭代器，提供了三种插入器。</li>
+<li>函数适配器:用于扩展一元和二元函数对象。绑定器是一种函数适配器，通过将一个操作数绑定到给定值而将二元你函数对象转换为一元你函数对象。求反器也是函数适配器，标准库定义了两个求反器，分别用来针对一元函数和二元函数。</li>
+</ul>
+</li>
+<li><p>queue如何实现?</p>
+<pre class=" language-cpp"><code class="language-cpp">
+  <span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> T<span class="token operator">></span>
+  <span class="token keyword">class</span> <span class="token class-name">Queue</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span><span class="token operator">:</span>
+      <span class="token function">Queue</span><span class="token punctuation">(</span><span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token operator">~</span><span class="token function">Queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">bool</span> <span class="token function">enqueue</span><span class="token punctuation">(</span>T data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      T <span class="token function">dequeue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      T <span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">bool</span> <span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">bool</span> <span class="token function">isFull</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">private</span><span class="token operator">:</span>
+      T <span class="token operator">*</span>queue_<span class="token punctuation">;</span>
+      <span class="token keyword">int</span> front_<span class="token punctuation">;</span>
+      <span class="token keyword">int</span> rear_<span class="token punctuation">;</span>
+      <span class="token keyword">int</span> capacity_<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre>
+</li>
+</ul>
+<pre><code>template &lt;typename T&gt;
+Queue&lt;T&gt;::Queue(int c):
+    capacity_(c),
+    front_(0),
+    rear_(0),
+    queue_(NULL)
+{
+    queue_ = new T [c];
+    std::cout &lt;&lt; &quot;capacity:&quot; &lt;&lt; c &lt;&lt; std::endl;
+}
+
+template &lt;typename T&gt;
+Queue&lt;T&gt;::~Queue()
+{
+    if(queue_) {
+        delete [] queue_;
+    }
+}
+
+template &lt;typename T&gt;
+bool Queue&lt;T&gt;::enqueue(T data)
+{
+    if(isFull()) {
+        return false;
+    }
+
+    queue_[rear_] = data;
+    rear_ = (rear_ + 1) % capacity_;
+
+    return true;
+}
+
+template &lt;typename T&gt;
+T Queue&lt;T&gt;::dequeue()
+{
+    T data;
+
+    if(isEmpty()) {
+        throw std::out_of_range(&quot;Queue::dequeue() - Empty queue&quot;);
+    }
+
+    data = queue_[front_];
+    front_ = (front_ + 1) % capacity_;
+
+    return data;
+}
+
+template &lt;typename T&gt;
+T Queue&lt;T&gt;::front()
+{
+    if(isEmpty()) {
+        throw std::out_of_range(&quot;Queue::front() - Empty queue&quot;);
+    }
+
+    return queue_[front_];
+}
+
+template &lt;typename T&gt;
+bool Queue&lt;T&gt;::isEmpty()
+{
+    return (front_ == rear_);
+}
+
+template &lt;typename T&gt;
+bool Queue&lt;T&gt;::isFull()
+{
+    return (((rear_+1) % capacity_) == front_);
+}
+
+template &lt;typename T&gt;
+int Queue&lt;T&gt;::size()
+{
+    return ((rear_ -  front_ + capacity_) % capacity_);
+}
+```</code></pre><ul>
+<li><p>map如何实现?<br>  map使用红黑树实现</p>
+</li>
+<li><p>红黑树发现数据不平衡怎么做?</p>
+<ul>
+<li>红黑树规定，插入的节点必须是红色的。而且，二叉查找树中新插入的节点都是放在叶子节点上。</li>
+<li>如果插入节点的父节点是黑色的，那我们什么都不用做，它仍然满足红黑树的定义。</li>
+<li>如果插入的节点是根节点，那我们直接改变它的颜色，把它变成黑色就可以了。</li>
+<li>除此之外，其他情况都会违背红黑树的定义，于是我们就需要进行调整，调整的过程包含两种基础的操作：左右旋转和改变颜色。</li>
+<li>新节点插入之后，如果红黑树的平衡被打破，那一般会有下面三种情况。我们只需要根据每种情况的特点，不停地调整，就可以让红黑树继续符合定义，也就是继续保持平衡。</li>
+</ul>
+</li>
+<li><p>debug模式和release模式编译的区别?<br>  Debug 通常称为调试版本，它包含调试信息，并且不作任何优化，便于程序员调试程序。Release 称为发布版本，它往往是进行了各种优化，使得程序在代码大小和运行速度上都是最优的，以便用户很好地使用。</p>
+</li>
+<li><p>如何查看链接的动态库?</p>
+<ul>
+<li>ldd a.out</li>
+</ul>
+</li>
+</ul>
+<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><ul>
+<li><p>python的装饰器是什么？</p>
+<ul>
+<li>装饰器本质上是一个python函数，它可以让其他函数子啊不需要做任何代码改动的前提下增加额外的功能。装饰器返回值是一个函数对象，装饰器的作用就是为已经存在的函数或者对象添加额外的功能。</li>
+</ul>
+</li>
+<li><p>什么是闭包?</p>
+<ul>
+<li>如果一个内部函数中，对在外部作用域(但不是全局作用域)的变量进行引用，那么内部函数就被认为是闭包。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>说说 Tornado 的架构</p>
+<ul>
+<li>tornado和django是python中比较流行的web框架。自带socket，并实现了异步非阻塞。 </li>
+</ul>
+</li>
+<li><p>说说 flask 的架构</p>
+<ul>
+<li>python的web框架，特点是轻便。</li>
+</ul>
+</li>
+<li><p>Python 的生成器是什么？底层怎么实现</p>
+<ul>
+<li>如果列表元素可以通过某种算推算出来，那么我们是否可以在循环的过程中推算出后续的元素呢，这样就不必创建完整的列表，这种通过一边循环一边计算的机制称为生成器。</li>
+</ul>
+</li>
+</ul>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
+<li><p>了解哪几种排序方式？有没有 O(n) 的排序</p>
+<ul>
+<li>插入排序：直接插入排序，希尔排序</li>
+<li>选择排序:简单选择排序，堆排序</li>
+<li>交叉排序：冒泡排序，快速排序</li>
+<li>归并排序</li>
+<li>基数排序</li>
+</ul>
+</li>
+<li><p>平衡二叉树的插入</p>
+<ul>
+<li>平衡二叉树的定义是左右两颗子树的高度相差不为为1.</li>
+<li>平衡二叉树有四种不平衡的情况：<ul>
+<li>对节点的左儿子的左子树进行一次插入。简称左左。</li>
+<li>对节点的左儿子的右子树进行一次插入。简称左右。</li>
+<li>对节点的右儿子的左子树进行一次插入。简称右左。</li>
+<li>对节点的右儿子的右子树进行一次插入。简称右右。</li>
+</ul>
+</li>
+<li>调整措施：对于左左和右右的情况采用单旋转就可以解决，左左进行一次右旋操作，右右进程一次左旋操作。而对另外两种情况则进行两次旋转，对于左右的情况，先将节点的左孩子作为选装的根节点进行一次左旋转换为左左的情况，然后再进行一次右选即可。对于右左的情况，先对节点的右孩子进行一次右旋操作转换为右旋，然后在进行左旋即可。</li>
+</ul>
+</li>
+<li><p>平衡二叉树的删除操作</p>
+<ul>
+<li>首先在整个二叉树中搜索要删除的节点，如果没有搜索到直接返回不做处理，否则指向一下操作:</li>
+<li>要删除节点是当前根节点t。<ul>
+<li>如果左子树高于右子树，将左子树的最大值作为根节点，删除左子树最大值节点。</li>
+<li>如果左子树低于右子树，将右子树的最小值作为根节点，删除右子树最大值节点。</li>
+</ul>
+</li>
+<li>如果要删除节点元素小于当前根节点t值，在左子树中进行删除，递归调用在左子树中实施删除。判断当期节点是否满足平衡条件，如果满足只需要更新节点高度信息，如果不满足，需要进行平衡的调整。</li>
+<li>如果删除节点大于当期节点t，在右子树进行茶树操作。</li>
+</ul>
+</li>
+<li><p>二叉查找树</p>
+<ul>
+<li>二叉搜索树是一种节点值之间有一定数量级次序的二叉树。</li>
+</ul>
+</li>
+<li><p>10个 G 的最高访问 Ip 统计</p>
+<ul>
+<li>100g文件几乎不可能同时加载到内存中，必须要拆分，设计一个哈希函数，将100g的文件分成10000分，这样每份大概10mb，可以加载到内存中了。这个过程是map的过程.</li>
+<li>将10m的小文件加载到内存中，统计出现次数多个那个ip。可以使用二叉树统计出现次数，我们将这个过程称为reduce，这个由很多worker的计算机完成，然后将前十个ip返回给master，然后master找到其中最大的10个ip就可以了。</li>
+</ul>
+</li>
+<li><p>倒排索引</p>
+<ol>
+<li><p>倒排索引的思想：有属性值来确定记录的技术。主要由单词词典和倒排文件组成。</p>
+</li>
+<li><p>倒排索引的基本框架</p>
+<ul>
+<li>单词和单词字典:搜索引擎的通常索引单位是单词，单词词典是有文档集合中出现过的所有单词构成的字符串集合，单词词典内每条索引项纪录单词本身的一些信息以及指向倒排列表的指针。</li>
+<li>倒排列表: 记录了出现某个单词的所有文档的文档列表以及单词在该文档中出现的位置信息。</li>
+<li>倒排文件:所有单词的倒排列表往往存储在磁盘的某个文件中，这个文件也被称为倒排文件。</li>
+</ul>
+<img src="/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/%E6%96%87%E6%A1%A3%E9%9B%86%E5%90%88.png" class="" title="文档集合">
+<img src="/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/%E7%AE%80%E5%8D%95%E7%9A%84%E5%80%92%E6%8E%92%E5%88%97%E8%A1%A8.png" class="" title="简单的倒排列表">
+</li>
+</ol>
+</li>
+<li><p>常用缓存置换算法</p>
+<ol>
+<li>fifi算法:先进先出，其实在操作系统的设计理念中很多地方都利用到了这个思想，如作业调度，核心原则是:如果一个数据先进入缓存当中，就应该最早被淘汰。实现思想：利用一个双向链表保存数据，新的数据添加到末尾，为了提高访问效率，可以使用hashmap来保存key在链表中对应的位置。</li>
+<li>lfu算法:最近最少使用算法，基本思路是如果一个数据在最近的时间内使用次数很少，在将来的时间内的使用次数的可能性也会很小。为了能淘汰最少使用的数据，最简单的设计思路是利用一个数组存储数据项，用hashmap存储每个数据项在数组中对应的位置，</li>
+<li>LRU算法：最近最久未使用的意思。可以使用hashmap和链表实现，当需要插入新的数据的时候，如果新数据在链表中存在，则把该节点移到链表头部，如果不存在则新建一个节点放到链表头部，如果缓存满了删除链表中的的最后一个，在访问数据的时候如果数据在链表中存在，就把数据项移到链表的头部，否则返回-1，这样链表中的最后一个元素就是最近未访问的元素了。</li>
+</ol>
+</li>
+<li><p>堆和栈的区别</p>
+<ol>
+<li>申请方式：栈是系统自动分配不的，而堆的内存需要程序员自己申请。</li>
+<li>申请后系统的响应:栈是系统为程序提供内存。堆是首先系统知道操作系统有一个记录空闲内存地址的链表，当系统收到程序的申请的时候，遍历该链表将第一个大于申请空间的堆节点找出，然后将该节点从空闲节点链表中删除，然后将该节点的空间分配给程序。</li>
+<li>申请空间大小的限制:栈的最大容量是确定的。堆是从高地址扩展的数据结构，是不连续的内存区域。堆的大小受限于计算机系统中有效的虚拟内存。由此可见堆获得的空间比较灵活，也比较大。</li>
+<li>申请效率的比较: 栈是系统自动分配速度较快，而对的速度较慢。容易产生内存碎片。</li>
+<li>栈和堆中存储的内容:在函数调用的时候，第一个进栈的是主函数后的下一条指令的地址。然后是函数的各个参数，然后是函数中局部变量。堆一般是在头部用一个字节存储存放堆的大小。堆的具体内容有程序员安排。</li>
+<li>一般栈的存储效率较为低。</li>
+</ol>
+</li>
+<li><p>常用 hash 算法</p>
+<ul>
+<li>md4,ms5,sha-1及其他。</li>
+<li>hash的主要原理是把大范围缩小到小范围，所以你输入的实际值的个数必须和小范围相当或者比他更小，不然会冲突很多。</li>
+<li>由于hash逼向单向函数，所以可以用他来进行数据加密。</li>
+<li>由于不同的应用对hash函数有着不同的要求，不如用于加密的hash函数主要考虑他和单向函数的差距，而用于查找的hash函数主要考虑他映射到小范围的冲突率。</li>
+</ul>
+</li>
+<li><p>md5、sha1 的实现</p>
+<ol>
+<li>两者都是哈希函数，正式的hash函数定义是吧任意长度的数据计算成固定长度的数据，也就是说函数的输入时任意长度，输出总是固定的长度，md5返回32个十六进制数，sha-1返回40位十六进制数。</li>
+<li>md5和sha1的函数都是不可逆的函数，不存在一个算法能够由哈希值倒退出原始的信息。对原始值的任意一点改变都会导致haash值的巨大变化。运算的代价很低，可以很快的计算出hash值的大小。</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>两个有序数组找并集的优化</p>
+<ul>
+<li>先查找数据的上下界，然使用插值查找的地方法找到符合条件的元素。</li>
+</ul>
+</li>
+<li><p>10亿个整数中找最大的 100 个，用 O(n)</p>
+<ul>
+<li>取出前100个数，维护一个100个数的最小堆，遍历一遍剩余元素，在此过程中卫胡最小堆就可以了。</li>
+<li>选取前100个元素，并排序，记为序列L，然后一次扫描剩余的元素x，与排序好的最小元素比较，如果比这个最小的元大，就将这个最小元素删除，然后吧x利用插入排序的思想，然后到序列L中，依次循环，就可以找出最大的100个元素。</li>
+</ul>
+</li>
+</ul>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ul>
+<li><p>HTTP 和 TCP 有什么关系</p>
+<ul>
+<li>tcp是传输层而http是应用层的，http是基于tcp连接基础的，简单的说tcp就是单纯的建立连接，不涉及我么需要的任何的实际数据，简单的传输，http是用来收发数据的也就是实际应用上来的。</li>
+<li>从传输层说下tcp连接，我们要和服务端连接tcp，需要通过三次连接，包括请求，确认 ，建立连接也就是三次握手的协议。</li>
+<li>从实际的数据来说http，客户端和服务器建立的tcp连接后，就需要http来传送数据了，http协议简单来说还是请求，确认和连接。总台就是客户端发送一个http请求给服务器，服务器接收到了这个http请求，然后返回给客户端一个http相应，然后客户端的中间件或者说是浏览器就把这些数据渲染成了网页。第一：发送一个http请求给S，这个请求包括请求头和请求内容:包括了，1.请求的方法是POST/GET,请求的URL，http协议版本2.请求的数据，和编码方式3是否有cookie和cooies，是否缓存等。post和get请求方式的区别是，get把请求内容放在URL后面，但是URL长度有限制。而post是以表单的形势，适合要输入密码之类的，因为不在URL中显示，所以比较安全。第二：S收到了http请求，然后根据请求头，返回http响应。response header：包括了1.cookies或者sessions2.状态吗3.内容大小等<br>response body：即响应的内容，包括，JS什么的。第三，C收到了以后，就由浏览器完成一系列的渲染，包括执行JS脚本等。</li>
+<li>http可以理解是为了解释数据用的，并安排数数据发送。tcp是用来控制数据的发送不会出问题用的。可以理解为http是快递的收件方和寄件方，而tcp则是快递公司负责快递的发送，送件方可以提出一些要求，而快递公司配送需要满足这些要求。</li>
+</ul>
+</li>
+<li><p>TCP 的三次握手过程</p>
+<ul>
+<li>listen:侦听来自远方的tcp端口的连接请求(服务器)</li>
+<li>syn-sent:在发送连接请求后等待匹配的连接请求(客户端)</li>
+<li>syn-recv:在收到和发送一个链接请求后等待对方对链接的确认(服务器)</li>
+<li>established:代表一个打开的连接(服务器、客户端)</li>
+<li>fin-wait-1:等待远程tcp连接中断请求，或先前连接中断请求的确认(客户端)</li>
+<li>FIN-WAIT-2：从远程TCP等待连接中断请求（客户端）</li>
+<li>CLOSE-WAIT：等待从本地用户发来的连接中断请求（服务器）</li>
+<li>CLOSING：等待远程TCP对连接中断的确认（客户端、服务器)</li>
+<li>LAST-ACK：等待原来的发向远程TCP的连接中断请求的确认（服务器）</li>
+<li>TIME-WAIT：等待足够的时间以确保远程TCP接收到连接中断请求的确认（客户端）</li>
+<li>CLOSED：没有任何连接状态（客户端、服务器）</li>
+</ul>
+<ol>
+<li><p>TCP服务器进程先创建传输控制块TCB, 时刻准备接受客户端进程的连接请求, 此时服务器就进入了 LISTEN（监听）状态。</p>
+</li>
+<li><p>TCP客户端进程也是先创建传输控制块TCB, 然后向服务器发出连接请求报文，此时报文首部中的同步标志位SYN=1, 同时选择一个初始序列号 seq = x(x为随机生成), 此时，TCP客户端进程进入了 SYN-SENT（同步已发送状态）状态。TCP规定, SYN报文段（SYN=1的报文段）不能携带数据，但需要消耗掉一个序号。</p>
+</li>
+<li><p>TCP服务器收到请求报文后, 如果同意连接, 则发出确认报文。确认报文中的 ACK=1, SYN=1, 确认序号是 x+1（x为第2步客户端发送过来的序列号）, 同时也要为自己初始化一个序列号 seq = y(y为随机生成), 此时, TCP服务器进程进入了SYN-RCVD（同步收到）状态。这个报文也不能携带数据, 但是同样要消耗一个序号。 </p>
+</li>
+<li><p>TCP客户端进程收到服务端回复后需要进行相关确认（该处需要检查第3步服务器发送的标志位ACK的值是否为1，确认序号是否为第2步客户端发送的初始序号x+1），当确认正确后，还要向服务器给出确认。确认报文的ACK=1，确认序号是 y+1，自己的序列号是 x+1。</p>
+</li>
+<li><p>此时，TCP连接建立，客户端进入ESTABLISHED（已建立连接）状态。当服务器收到客户端的确认后也进入ESTABLISHED状态，此后双方就可以开始通信了。</p>
+<img src="/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" class="" title="tcp三次握手">
+</li>
+</ol>
+<ul>
+<li>SYN表示建立连接，ACK表示响应，FIN表示关闭连接，PSH表示数据传输，RST表示链接重置。大写的值为0或1，而小写的ack和seq是小写的单词。</li>
+</ul>
+</li>
+<li><p>TCP 和 UDP 的区别</p>
+<ul>
+<li>基于连接和无连接。</li>
+<li>tcp要求系统资源较多，udp较少。</li>
+<li>udp程序结构较为简单。</li>
+<li>tcp是流模式，而udp是数据报模式。</li>
+<li>tcp保证数据的正确性，udp可能丢包。</li>
+<li>tcp保证数据顺序，udp不保证数据顺序。</li>
+</ul>
+</li>
+<li><p>TCP 包为什么需要 Seq</p>
+<ul>
+<li>seq表示的是我方(发送方)这边，这个packet的数据部分的第一位应该在整个data中所在的位置。用来解决包乱序的问题</li>
+<li>ack num是指期望的对方(接收方)的下一次seq num是多少。用来解决不丢包的问题。</li>
+<li>通过seq和ack可以发现数据是否有丢包的现象。 </li>
+</ul>
+</li>
+<li><p>包为什么会乱序</p>
+<ul>
+<li>在包传送的过程中可能出现丢包和延时发送的情况。所以收到的包可能是乱序的。</li>
+</ul>
+</li>
+<li><p>说说 HTTP 协议</p>
+</li>
+<li><p>HTTP 1.0 和 HTTP 1.1 的差别</p>
+<ol>
+<li>http是短连接，http1.1是长连接。</li>
+<li>http1.1增加了请求头和响应头。</li>
+<li>http1.1客户端不同请求之间是异步的。</li>
+</ol>
+</li>
+<li><p>HTTP 头部有哪些字段<br>  请求头（Request）：<br>  Accept：text/html application/xml 告诉服务器客户端浏览器这边可以出里什么数据；<br>  Accept-Encodeing：gzip 告诉服务器我能支持什么样的压缩格式<br>  accept-language：告诉服务器浏览器支持的语言<br>  Cache-control：告诉服务器是否缓存<br>  Connection:keep-alive 告诉服务器当前保持活跃（与服务器处于链接状态）<br>  Host：远程服务器的域名<br>  User-agent：客户端的一些信息，浏览器信息 版本<br>  referer：当前页面上一个页面地址。一般用于服务器判断是否为同一个域名下的请求</p>
+<p>  返回头（response-header）：<br>  cache-control:private/no-cache; 私有的不需要缓存/no-cache也不需要缓存<br>  connection:keep-live; 服务器同意保持连接<br>  content-Enconding：gzip；除去头的剩余部分压缩返回格式<br>  content-length:内容长度<br>  content-type：text/css;返回内容支持格式<br>  Date： 时间<br>  server：ngnix 服务器类型<br>  set-Cookie:服务器向客户端设置cookie 第一次访问服务器会下发cookie当作身份认证信息，第二次访问服务器再把cookie送给服务器，可以当作认证信息<br>  last-modified: 时间戳 文档的最后改动时间。客户可以通过If-Modified-Since请求头提供一个日期，该请求将被视为一个条件GET，只有改动时间迟于指定时间的文档才会返回，否则返回一个304(Not Modified)状态。Last-Modified也可用setDateHeader方法来设置。<br>  expires 告诉浏览器把回送的资源缓存多长时间 -1或0则是不缓存<br>  etag:版本专有的加密指纹。（有的网站不用，并非必须）优先检查etag再检查last-modified的时间戳。向服务器请求带if-none-match,服务器判断是否过期未过期返回304，过期返回200</p>
+</li>
+</ul>
+<ul>
+<li><p>为什么 HTTP 是无连接的</p>
+<ol>
+<li>没一个访问都是无连接的，服务器挨个处理队列中的方访问，每处理完一个就关闭连接，然后处理下一个新的。</li>
+<li>无连接的含义是限制每次连接值处理一个请求，服务器处理完客户的请求，并受到客户的应答后，即断开连接。</li>
+</ol>
+</li>
+<li><p>有没有保持长连接的 HTTP</p>
+<ul>
+<li>从http1.1起，都默认开启了keep-alive，保持连接性，简单来说就是打开一个网页后，客户端和服务端之间用于传输http数据和tcp连接不会关闭，如果客户再次访问这个服务器上的网页，会继续使用这一条已经建立的连接。keep-alive不会永久保持连接，有一个持续的时间，可以在不同的软件中设定这个时间。 </li>
+</ul>
+</li>
+<li><p>TCP 的拥塞控制是怎样的</p>
+<ul>
+<li><p>发送方维持一个拥塞窗口的状态变量，拥塞窗口的大小取决于网络的拥塞程度，并且在动态的改变，发送方让自己的发送窗口等于拥塞窗口，另外如果考虑接受放的接受能力，发送窗口可能小于拥塞窗口。慢开始算法的思路就是不要一开始就发送大量的数据，先测一下网络的拥塞程度，然后由小到大的增加网络的拥塞窗口。</p>
+</li>
+<li><p>避免缓慢增长算法让拥塞窗口缓慢的增长，也就是每经过一个往返时间rtt就把发送方的拥塞窗口增加1。</p>
+</li>
+<li><p>快重传要求接受方子啊手打搜一个失序的报文段后就立即发出重复确认，发送方只要一接收到三个重复确认就立刻重传未收到的报文段，而不必等待设置的计时器时间到。</p>
+</li>
+<li><p>快重传配合的还有快恢复算法，当发送方连续收到三个重复确认是，就执行乘法减小算法，将ssthresh门限变为阻塞窗口的一般大小，但是接下去不执行慢开始算法。考虑到如果网络出现阻塞就不会收到几个重复确认的，所以发送方认为网络没有阻塞，所以不执行慢开始算法，而是将阻塞窗口设置为ssthresh的大小，然后执行拥色避免算法。</p>
+<img src="/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/%E4%BB%8E%E8%BF%9E%E7%BB%AD%E6%94%B6%E5%88%B0%E4%B8%89%E4%B8%AA%E9%87%8D%E5%A4%8D%E7%A1%AE%E8%AE%A4%E8%BD%AC%E5%88%B0%E6%8B%A5%E5%A1%9E%E9%81%BF%E5%85%8D.png" class="" title="从连续收到三个重复确认转到拥塞避免">
+</li>
+</ul>
+</li>
+<li><p>TCP 中客户端发送 SYN 后客户端和服务器分别处在什么状态</p>
+<ul>
+<li>客户端在等待连接转太也就是syn_sent状态。服务器在syn_received状态。</li>
+</ul>
+</li>
+<li><p>304 状态码的意义？在 HTTP 协议中的实现</p>
+<ul>
+<li>当用户第一次请求index.html时，服务器会添加一个名为Last-Modified响应头，这个头说明了index.html的最后修改时间，浏览器会把index.html内容，以及最后响应时间缓存下来。当用户第二次请求index.html时，在请求中包含一个名为If-Modified-Since请求头，它的值就是第一次请求时服务器通过Last-Modified响应头发送给浏览器的值，即index.html最后的修改时间，If-Modified-Since请求头就是在告诉服务器，我这里浏览器缓存的index.html最后修改时间是这个，您看看现在的index.html最后修改时间是不是这个，如果还是，那么您就不用再响应这个index.html内容了，我会把缓存的内容直接显示出来。而服务器端会获取If-Modified-Since值，与index.html的当前最后修改时间比对，如果相同，服务器会发响应码304，表示index.html与浏览器上次缓存的相同，无需再次发送(节省传输成本)，浏览器可以显示自己的缓存页面，如果比对不同，那么说明index.html已经做了修改，服务器会响应200。</li>
+</ul>
+</li>
+<li><p>A 类地址和 B 类地址的区别</p>
+<ul>
+<li><p>一个A类IP地址是指， 在IP地址的四段号码中，第一段号码为网络号码，剩下的三段号码为本地计算机的号码。如果用二进制表示IP地址的话，A类IP地址就由1字节的网络地址和3字节主机地址组成，网络地址的最高位必须是“0”。A类IP地址中网络的标识长度为8位，主机标识的长度为24位。</p>
+</li>
+<li><p>一个B类IP地址是指，在IP地址的四段号码中，前两段号码为网络号码。如果用二进制表示IP地址的话，B类IP地址就由2字节的网络地址和2字节主机地址组成，网络地址的最高位必须是“10”。B类IP地址中网络的标识长度为16位，主机标识的长度为16位。</p>
+</li>
+<li><p>一个C类IP地址是指，在IP地址的四段号码中，前三段号码为网络号码，剩下的一段号码为本地计算机的号码。如果用二进制表示IP地址的话，C类IP地址就由3字节的网络地址和1字节主机地址组成，网络地址的最高位必须是“110”。C类IP地址中网络的标识长度为24位，主机标识的长度为8位。</p>
+</li>
+<li><p>A类地址适合大型网络，b类地址适合中型网络，c类地址适合小型网络。</p>
+</li>
+</ul>
+</li>
+<li><p>tcp ip 层的意义?</p>
+<ul>
+<li>IP协议是TCP/IP协议的核心，所有的TCP，UDP，IMCP，IGMP的数据都以IP数据格式传输。要注意的是，IP不是可靠的协议，这是说，IP协议没有提供一种数据未传达以后的处理机制，这被认为是上层协议：TCP或UDP要做的事情。</li>
+</ul>
+</li>
+<li><p>进程 accept 时在哪里取得套接字</p>
+<ul>
+<li>accept函数用于面向连接类型的套接字类型（SOCK_STREAM和SOCK_SEQPACKET）。accept函数将从连接请求队列中获得连接信息，创建新的套接字，并返回该套接字的文件描述符。新创建的套接字用于服务器与客户机的通信，而原来的套接字仍然处于监听状态。accept函数的sockfd参数为监听的套接字描述符。addr参数为指向结构体sockaddr的指针。参数addrlen为addr参数指向的内存空间的长度</li>
+</ul>
+</li>
+<li><p>什么是网络虚拟化</p>
+<ul>
+<li>网络虚拟化 (NV) 是指将传统上在硬件中交付的网络资源抽象化到软件中。NV 可以将多个物理网络整合为一个基于软件的虚拟网络，或者可以将一个物理网络划分为多个隔离和独立的虚拟网络</li>
+</ul>
+</li>
+<li><p>vpn 工作原理</p>
+<ul>
+<li>而我们通常把这种通过两边的路由器建立隧道然后实现两个私网网段互通的VPN的形态称为端到端VPN。</li>
+</ul>
+</li>
+<li><p>TCP 对网络拥堵的判断</p>
+<ul>
+<li><p>如果随着网络负载的增加，网络的吞吐量明显小于正常的吞吐量，那么网络就进入例如轻度拥塞的状况。</p>
+</li>
+<li><p>如果网络得吞吐量随着网络负载的增大反而下降，那么网络就可能进入拥塞状态。</p>
+</li>
+<li><p>如果网络的负载继续增大，而网络的吞吐量下降到零，网络就可能进入了死锁状态。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><ul>
+<li><p>指针对应的地址是不是物理地址</p>
+<ul>
+<li>指针对应的是一个逻辑地址，每个程序分配的都有虚拟的内存空间。</li>
+</ul>
+</li>
+<li><p>操作系统的寻址方式</p>
+<ul>
+<li>所谓寻址方式，即指令中提供操作数或操作数地址的方式。通俗地说就是寻找操作数地址的方法。寻址方式的数量代表了微机系统对存储器管理能力的强弱，合理地使用寻址方式可以扩大访存空间，缩短指令长度，满足各种程序设计需要。与数据有关的寻址方式划分为三类：立即寻址方式，寄存器寻址方式，存储器寻址方式。</li>
+</ul>
+</li>
+<li><p>linux 中如何计算可用内存</p>
+<ul>
+<li>可用内存=系统free memory+buffers+cached。</li>
+</ul>
+</li>
+<li><p>用 top 看耗性能的线程</p>
+<ul>
+<li>查看某一个进程的所有线程 top -H -p <pid></li>
+</ul>
+</li>
+<li><p>epoll 与 select 比较</p>
+<ul>
+<li>4种网络io模型: 阻塞模型，非阻塞io模型，多路io复用模型，异步io模型。</li>
+<li>多路复用模型，也被称为时间驱动io，它的基本原理是有个函数会不断的轮询负责所有的socket，当有某个socket的数据到达了，就通知用户进程。</li>
+<li>首先来看常见的selece和poll，对网络编程来说，一般认为poll比select要高级一些原因如下:<ul>
+<li>poll不要求开发者在计算最大文件描述符时进行+1的操作。</li>
+<li>poll在对付大数目的文件描述符的处理速度更快，因为对于select需要检查大量描述符对应的fd_set中的每一个比特位。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>epoll 的缺点，如何克服缺点</p>
+</li>
+<li><p>epoll 机制中文件描述符就绪时如何从内核态通知到用户态的进程</p>
+</li>
+<li><p>epoll 实现</p>
+</li>
+<li><p>说说同步 异步的区别</p>
+</li>
+<li><p>进程间通信的方式</p>
+</li>
+<li><p>进程间的通信有哪些机制？在资源内存方面比较如何</p>
+</li>
+<li><p>同一进程线程间的通信；不同进程线程间的通信；</p>
+</li>
+<li><p>如何判断系统在哪些地方耗费性能</p>
+</li>
+<li><p>cpu 调度的单位是什么</p>
+</li>
+<li><p>如何让多核 cpu 更好的利用资源</p>
+</li>
+</ul>
+<ul>
+<li>什么是缺页</li>
+<li>如何控制两个进程对一个数据的访问？怎么处理加锁问题</li>
+<li>说一说协程</li>
+<li>是否了解 netstat</li>
+<li>在 shell 中用 ./a.out | wc- l 结果是多少？管道的输入是哪个进程的</li>
+<li>谈谈 Linux 的文件权限。让只有拥有者才能读写？让拥有者只能读和执行？ 删除文件需要什么权限</li>
+<li>假如一个进程在对文件进行读写，管理员把文件删除了怎么办</li>
+<li>协程与进程线程比较有什么优势</li>
+<li>计算机从电源加载开始的启动过程</li>
+<li>什么是中断调用？中断程序的分类</li>
+<li>lsof strace ptrace gdb 使用</li>
+<li>内核态和用户态的区别</li>
+<li>为什么需要内核态</li>
+<li>什么时候进入内核态</li>
+<li>多线程需要加锁的变量</li>
+<li>程序在内存中的布局</li>
+</ul>
+<ul>
+<li><p>后端组件</p>
+</li>
+<li><p>memcached 的内存设计</p>
+<ul>
+<li>Memcached 的内存分配以page为单位，默认情况下一个page是1M，可以通过-I参数在启动时指定。如果需要申请内存时，memcached会划分出一个新的 page并分配给需要的slab区域。page一旦被分配在重启前不会被回收或者重新分配</li>
+<li>Memcached并不是将所有大小的数据都放在一起的，而是预先将数据空间划分为一系列slabs，每个slab只负责一定范围内的数据存储。如下图，每个slab只存储 大于其上一个slab的size并小于或者等于自己最大size的数据。例如：slab 3只存储大小介于137 到 224 bytes的数据。如果一个数据大小为230byte将被分配到slab 4中。从下图可以看出，每个slab负责的空间其实是不等的，memcached默认情况下下一个slab的最大值为前一个的1.25倍，这个可以通过修 改-f参数来修改增长比例。</li>
+<li>Chunk 是一系列固定的内存空间，这个大小就是管理它的slab的最大存放大小。例如：slab 1的所有chunk都是104byte，而slab 4的所有chunk都是280byte。chunk是memcached实际存放缓存数据的地方，因为chunk的大小固定为slab能够存放的最大值， 所以所有分配给当前slab的数据都可以被chunk存下。如果时间的数据大小小于chunk的大小，空余的空间将会被闲置，这个是为了防止内存碎片而设计的。例如下图，chunk size是224byte，而存储的数据只有200byte，剩下的24byte将被闲置。</li>
+<li>Memcached在启动时通过-m指定最大使用内存，但是这个不会一启动就占用，是随着需要逐步分配给各slab的。如果一个新的缓存数据要被存放，memcached首先选择一个合适的slab，然后查看该slab是否还有空闲的chunk，如果有则直接存放进去；如果没有则要进行申请。slab申请内存时以page为单位，所以在放入第一个数据，无论大小为多少，都会有1M大小的page被分配给该slab。申请到 page后，slab会将这个page的内存按chunk的大小进行切分，这样就变成了一个chunk的数组，在从chunk数组中选择一个用于存储 数据。如下图，slab 1和slab 2都分配了一个page，并按各自的大小切分成chunk数组。</li>
+</ul>
+</li>
+<li><p>有哪些服务器模型</p>
+<ul>
+<li>同步阻塞迭代模型，多进程并发模型，多线程并发模型，IO多路复用模型之select/poll，IO多路复用模型之epoll</li>
+</ul>
+</li>
+<li><p>tinyhttpd 的基本工作流程</p>
+<ul>
+<li><p>tinyhttpd 是一个不到 500 行的超轻量型 Http Server，用来学习非常不错，可以帮助我们真正理解服务器程序的本质。</p>
+</li>
+<li><p>服务器启动，在指定端口或随机选取端口绑定 httpd 服务。</p>
+</li>
+<li><p>收到一个 HTTP 请求时（其实就是 listen 的端口 accpet 的时候），派生一个线程运行 accept_request 函数。</p>
+</li>
+<li><p>取出 HTTP 请求中的 method (GET 或 POST) 和 url,。对于 GET 方法，如果有携带参数，则 query_string 指针指向 url 中 ？ 后面的 GET 参数。</p>
+</li>
+<li><p>格式化 url 到 path 数组，表示浏览器请求的服务器文件路径，在 tinyhttpd 中服务器文件是在 htdocs 文件夹下。当 url 以 / 结尾，或 url 是个目录，则默认在 path 中加上 index.html，表示访问主页。</p>
+</li>
+<li><p>如果文件路径合法，对于无参数的 GET 请求，直接输出服务器文件到浏览器，即用 HTTP 格式写到套接字上，跳到（10）。其他情况（带参数 GET，POST 方式，url 为可执行文件），则调用 excute_cgi 函数执行 cgi 脚本。</p>
+</li>
+<li><p>取整个 HTTP 请求并丢弃，如果是 POST 则找出 Content-Length. 把 HTTP 200  状态码写到套接字。</p>
+</li>
+<li><p>建立两个管道，cgi_input 和 cgi_output, 并 fork 一个进程。</p>
+</li>
+<li><p>在子进程中，把 STDOUT 重定向到 cgi_outputt 的写入端，把 STDIN 重定向到 cgi_input 的读取端，关闭 cgi_input 的写入端 和 cgi_output 的读取端，设置 request_method 的环境变量，GET 的话设置 query_string 的环境变量，POST 的话设置 content_length 的环境变量，这些环境变量都是为了给 cgi 脚本调用，接着用 execl 运行 cgi 程序。</p>
+</li>
+<li><p>在父进程中，关闭 cgi_input 的读取端 和 cgi_output 的写入端，如果 POST 的话，把 POST 数据写入 cgi_input，已被重定向到 STDIN，读取 cgi_output 的管道输出到客户端，该管道输入是 STDOUT。接着关闭所有管道，等待子进程结束。</p>
+</li>
+<li><p>关闭与浏览器的连接，完成了一次 HTTP 请求与回应，因为 HTTP 是无连接的。</p>
+</li>
+</ul>
+</li>
+<li><p>cgi 程序是什么？fastcgi 等等</p>
+<ul>
+<li>放置在服务器上的一段可执行程序。作为HTTP服务器的时候，客户端可以通过GET或者POST请求来调用这可执行程序。</li>
+<li>FastCGI是语言无关的、可伸缩架构的CGI开放扩展，其主要 行为是将CGI解释器进程保持在内存中并因此获得较高的性能。众所周知，CGI解释器的反复加载是CGI性能低下的主要原因，如果CGI解释器保持在内存 中并接受FastCGI进程管理器调度，则可以提供良好的性能、伸缩性、Fail-Over特性等等。</li>
+</ul>
+</li>
+<li><p>apache 和 nginx 的不同在哪里</p>
+<ul>
+<li>nginx<ul>
+<li>轻量级，采用 C 进行编写，同样的 web 服务，会占用更少的内存及资源</li>
+<li>抗并发，nginx 以 epoll and kqueue 作为开发模型，处理请求是异步非阻塞的，负载能力比 apache 高很多，而 apache 则是阻塞型的。在高并发下 nginx 能保持低资源低消耗高性能 ，而 apache 在 PHP 处理慢或者前端压力很大的情况下，很容易出现进程数飙升，从而拒绝服务的现象。</li>
+<li>nginx 处理静态文件好，静态处理性能比 apache 高三倍以上</li>
+<li>nginx 的设计高度模块化，编写模块相对简单</li>
+<li>nginx 配置简洁，正则配置让很多事情变得简单，而且改完配置能使用 -t 测试配置有没有问题，apache 配置复杂 ，重启的时候发现配置出错了，会很崩溃</li>
+<li>nginx 作为负载均衡服务器，支持 7 层负载均衡</li>
+<li>nginx 本身就是一个反向代理服务器，而且可以作为非常优秀的邮件代理服务器</li>
+<li>启动特别容易, 并且几乎可以做到 7*24 不间断运行，即使运行数个月也不需要重新启动，还能够不间断服务的情况下进行软件版本的升级</li>
+<li>社区活跃，各种高性能模块出品迅速</li>
+</ul>
+</li>
+<li>apache<ul>
+<li>apache 的 rewrite 比 nginx 强大，在 rewrite 频繁的情况下，用 apache</li>
+<li>apache 发展到现在，模块超多，基本想到的都可以找到</li>
+<li>apache 更为成熟，少 bug ，nginx 的 bug 相对较多</li>
+<li>apache 超稳定</li>
+<li>apache 对 PHP 支持比较简单，nginx 需要配合其他后端用</li>
+<li>apache 在处理动态请求有优势，nginx 在这方面是鸡肋，一般动态请求要 apache 去做，nginx 适合静态和反向。</li>
+<li>apache 仍然是目前的主流，拥有丰富的特性，成熟的技术和开发社区</li>
+</ul>
+</li>
+<li>两者最核心的区别在于 apache 是同步多进程模型，一个连接对应一个进程，而 nginx 是异步的，多个连接（万级别）可以对应一个进程.一般来说，需要性能的 web 服务，用 nginx 。如果不需要性能只求稳定，更考虑 apache ，后者的各种功能模块实现得比前者，例如 ssl 的模块就比前者好，可配置项多。epoll(freebsd 上是 kqueue ) 网络 IO 模型是 nginx 处理性能高的根本理由，但并不是所有的情况下都是 epoll 大获全胜的，如果本身提供静态服务的就只有寥寥几个文件，apache 的 select 模型或许比 epoll 更高性能。当然，这只是根据网络 IO 模型的原理作的一个假设，真正的应用还是需要实测了再说的。</li>
+</ul>
+</li>
+<li><p>memcached 和 redis和mongodb 的差别是什么</p>
+<ul>
+<li>性能：都比较高，性能对我们来说应该都不是瓶颈总体来讲，TPS方面redis和memcache差不多，要大于mongodb</li>
+<li>操作的便利性：memcache数据结构单一，redis丰富一些，数据操作方面，redis更好一些，较少的网络IO次数，mongodb支持丰富的数据表达，索引，最类似关系型数据库，支持的查询语言非常丰富</li>
+<li>内存空间大小和数据量的大小: redis在2.0版本后增加了自己的VM特性，突破物理内存的限制；可以对key value设置过期时间（类似memcache）。memcache可以修改最大可用内存,采用LRU算法。mongoDB适合大数据量的存储，依赖操作系统VM做内存管理，吃内存也比较厉害，服务不要和别的服务在一起</li>
+<li>可用性： redis，依赖客户端来实现分布式读写；主从复制时，每次从节点重新连接主节点都要依赖整个快照,无增量复制，因性能和效率问题，所以单点问题比较复杂；不支持自动sharding,需要依赖程序设定一致hash 机制。一种替代方案是，不用redis本身的复制机制，采用自己做主动复制（多份存储），或者改成增量复制的方式（需要自己实现），一致性问题和性能的权衡。Memcache本身没有数据冗余机制，也没必要；对于故障预防，采用依赖成熟的hash或者环状的算法，解决单点故障引起的抖动问题。mongoDB支持master-slave,replicaset（内部采用paxos选举算法，自动故障恢复）,auto sharding机制，对客户端屏蔽了故障转移和切分机制。</li>
+<li>可靠性：redis支持（快照、AOF）：依赖快照进行持久化，aof增强了可靠性的同时，对性能有所影响。memcache不支持，通常用在做缓存,提升性能；MongoDB从1.8版本开始采用binlog方式支持持久化的可靠性。</li>
+<li>应用场景：redis：数据量较小的更性能操作和运算上。memcache：用于在动态系统中减少数据库负载，提升性能;做缓存，提高性能（适合读多写少，对于数据量比较大，可以采用sharding）。MongoDB:主要解决海量数据的访问效率问题。</li>
+</ul>
+</li>
+<li><p>知不知道进程池？有没有用过</p>
+</li>
+</ul>
+<ul>
+<li><p>redis 的用什么实现持久化？redis 的持久化是否能够信任</p>
+</li>
+<li><p>memcached 和 redis 为什么不能作为常用数据库</p>
+</li>
+<li><p>tinyhttpd 中对 HTTP 请求的处理</p>
+</li>
+<li><p>内存池对不同大小数据结构怎么存储</p>
+</li>
+<li><p>RPC 有哪几种实现方式？如何提供接口调用</p>
+<ul>
+<li>RPC 的全称是 Remote Procedure Call 是一种进程间通信方式。它允许程序调用另一个地址空间（通常是共享网络的另一台机器上）的过程或函数，而不用程序员显式编码这个远程调用的细节。即无论是调用本地接口/服务的还是远程的接口/服务，本质上编写的调用代码基本相同。</li>
+</ul>
+</li>
+<li><p>RPC 调用中同步、异步、阻塞、非阻塞的区别</p>
+</li>
+</ul>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><ul>
+<li>cookie 和 session 的区别</li>
+<li>get 与 post 的区别？访问安全性是否有区别？如何做到真正的访问安全</li>
+<li>如果发现网络不能访问会检查哪些方面？如果只有某个网站不能访问</li>
+<li>没有登陆后台的情况猜测服务器挂掉会是什么原因？如果你是网站管理员用户反馈你的网站不能访问应该怎么做</li>
+<li>在后台发现运行程序卡时应该怎么做？检查哪些方面</li>
+<li>介绍 HTTPS。能否截获 HTTPS 的数据包</li>
+</ul>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
+<li>数据库之间如何同步</li>
+<li>怎么保证数据库同时操作几个表的一致性</li>
+<li>怎么保证主从服务器中数据库的同步</li>
+<li>数据库 ACID 是什么</li>
+<li>关系型数据库和非关系型数据库的区别</li>
+<li>MySQL 的锁的类型</li>
+<li>什么时候 MySQL 会对表上锁？对一行上锁</li>
+<li>行级锁、表级锁的区别</li>
+<li>高并发访问 MYSQL 时，如何保持数据一致性</li>
+<li>MySQL 有哪些存储引擎？为什么使用 InnoDB</li>
+<li>MySQL 如何建立索引</li>
+<li>建立 A 列和 B 列的索引需要考虑什么</li>
+<li>数据库查询过慢的优化</li>
+<li>索引实现机制</li>
+<li>大数据，高并发</li>
+<li>如何设计一个高性能服务器架构</li>
+<li>在集群之间做缓存，一个节点挂了怎么办</li>
+<li>集群中 session 的同步</li>
+<li>集群之间的消息队列</li>
+<li>在集群之间做缓存，一个节点挂了怎么办</li>
+<li>有哪些高并发的服务器设计</li>
+<li>I/O 复用模型有哪些</li>
+<li>select 和 epoll 的区别</li>
+<li>秒杀中多个数据库服务器的同步</li>
+<li>抢票系统怎么做?</li>
+<li>设计 qq 对应所有属性的存储和访问</li>
+<li>什么是负载均衡？负载均衡的实现</li>
+</ul>
+<h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><ul>
+<li>网页中的 js 事件</li>
+<li>$( function() } ) 是什么意思？和 window.onload 什么区别</li>
+<li>用两句话概括 BootStrap</li>
+<li>用两句话概括 Jquery</li>
+</ul>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><ul>
+<li>Docker 的适用场景</li>
+<li>什么是无状态应用</li>
+<li>Docker 分层镜像机制</li>
+<li>Go 与 C++ 设计比较，优缺点是什么</li>
+<li>Go 的 import 机制优缺点</li>
+<li>cgroup 原理</li>
+<li>为什么要把项目 docker 化</li>
+<li>为什么需要资源隔离和虚拟化</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>介绍 MVC 模式</li>
+<li>SVM 原理</li>
+<li>Java 内存回收机制</li>
+<li>字节和字符的区别</li>
+<li>什么时候用字符读文件，什么时候用字节读文件</li>
+<li>写过的最难的程序是什么</li>
+<li>成就感最大的项目</li>
+<li>单例模式如何实现</li>
+<li>中文的编码有哪些</li>
+<li>XSS 攻击？举例说明 SQL 注入</li>
+<li>用两条能燃烧一个小时的不均匀的香计算 15 分钟</li>
+<li>7 个工人 7 小时挖了 7 米的洞，50 小时挖 50 米的洞需要多少人?</li>
+<li></li>
+</ul>
 
             </div>
             <hr/>
@@ -975,7 +1966,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8">
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">39.3k</span>
+                <span class="white-color">43.2k</span>
             
             <span id="sitetime"></span>
             

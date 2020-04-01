@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gaobo1112.github.io/"/>
-  <updated>2020-02-20T06:50:32.040Z</updated>
+  <updated>2020-03-31T12:37:22.700Z</updated>
   <id>http://gaobo1112.github.io/</id>
   
   <author>
@@ -17,133 +17,22 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>simulation</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/simulation/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/simulation/</id>
-    <published>2020-02-20T14:50:32.000Z</published>
-    <updated>2020-02-20T06:50:32.040Z</updated>
+    <title>动态规划</title>
+    <link href="http://gaobo1112.github.io/2020/03/06/suan-fa/dong-tai-gui-hua/"/>
+    <id>http://gaobo1112.github.io/2020/03/06/suan-fa/dong-tai-gui-hua/</id>
+    <published>2020-03-06T15:02:44.000Z</published>
+    <updated>2020-03-31T12:37:22.700Z</updated>
     
     <summary type="html">
     
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>search</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/search/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/search/</id>
-    <published>2020-02-20T14:48:00.000Z</published>
-    <updated>2020-02-20T06:48:00.312Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>tree</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/tree/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/tree/</id>
-    <published>2020-02-20T14:47:29.000Z</published>
-    <updated>2020-02-20T06:47:29.719Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>list</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/list/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/list/</id>
-    <published>2020-02-20T14:47:05.000Z</published>
-    <updated>2020-02-20T06:47:05.114Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hashtable</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/hashtable/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/hashtable/</id>
-    <published>2020-02-20T14:46:36.000Z</published>
-    <updated>2020-02-20T06:46:36.544Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>graph</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/graph/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/graph/</id>
-    <published>2020-02-20T14:46:11.000Z</published>
-    <updated>2020-02-20T06:46:11.860Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>geometry</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/geometry/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/geometry/</id>
-    <published>2020-02-20T14:45:40.000Z</published>
-    <updated>2020-02-20T06:45:40.178Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>分治</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/fen-zhi/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/fen-zhi/</id>
-    <published>2020-02-20T14:44:25.000Z</published>
-    <updated>2020-02-20T06:44:25.275Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>binary_search</title>
-    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/binary-search/"/>
-    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/binary-search/</id>
-    <published>2020-02-20T14:41:47.000Z</published>
-    <updated>2020-02-20T06:41:47.284Z</updated>
-    
-    <summary type="html">
+      
+      
+        
+        
+          &lt;h3 id=&quot;动态规划解决步骤&quot;&gt;&lt;a href=&quot;#动态规划解决步骤&quot; class=&quot;headerlink&quot; title=&quot;动态规划解决步骤&quot;&gt;&lt;/a&gt;动态规划解决步骤&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;1. 首先明确dp数组所存放数据的意义。
+2.
+        
+      
     
     </summary>
     
@@ -187,7 +76,7 @@
     <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/"/>
     <id>http://gaobo1112.github.io/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/</id>
     <published>2020-02-20T12:28:52.000Z</published>
-    <updated>2020-02-22T02:55:12.981Z</updated>
+    <updated>2020-03-31T12:37:27.911Z</updated>
     
     <summary type="html">
     
@@ -195,7 +84,7 @@
       
         
         
-          &lt;h3 id=&quot;c&quot;&gt;&lt;a href=&quot;#c&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;c&quot;&gt;&lt;a href=&quot;#c&quot; class=&quot;headerlink&quot;
         
       
     
