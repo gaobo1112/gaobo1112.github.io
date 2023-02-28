@@ -62,6 +62,8 @@
     <category term="游戏开发" scheme="http://gaobo1112.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
     
     
+    <category term="c#" scheme="http://gaobo1112.github.io/tags/c/"/>
+    
   </entry>
   
   <entry>
@@ -122,6 +124,10 @@
     
     
     
+    <category term="面试总结" scheme="http://gaobo1112.github.io/categories/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="面试" scheme="http://gaobo1112.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -144,6 +150,10 @@
     
     
     
+    <category term="算法" scheme="http://gaobo1112.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="算法" scheme="http://gaobo1112.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
