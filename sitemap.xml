@@ -2,42 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://gaobo1112.github.io/friends/index.html</loc>
-    
-    <lastmod>2023-02-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://gaobo1112.github.io/about/index.html</loc>
-    
-    <lastmod>2023-02-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://gaobo1112.github.io/tags/index.html</loc>
-    
-    <lastmod>2023-02-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://gaobo1112.github.io/categories/index.html</loc>
-    
-    <lastmod>2023-02-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://gaobo1112.github.io/2020/08/21/you-xi-kai-fa/unity/unity3d-you-xi-kai-fa-xue-xi/</loc>
     
     <lastmod>2020-08-21</lastmod>
@@ -140,6 +104,42 @@
     <loc>http://gaobo1112.github.io/contact/index.html</loc>
     
     <lastmod>2020-01-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://gaobo1112.github.io/friends/index.html</loc>
+    
+    <lastmod>2020-01-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://gaobo1112.github.io/about/index.html</loc>
+    
+    <lastmod>2020-01-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://gaobo1112.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-01-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://gaobo1112.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-01-08</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
