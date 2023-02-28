@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>苏北之</title>
+  
+  <subtitle>What is broken can be reforged!</subtitle>
+  <link href="http://gaobo1112.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://gaobo1112.github.io/"/>
+  <updated>2020-08-21T11:25:42.000Z</updated>
+  <id>http://gaobo1112.github.io/</id>
+  
+  <author>
+    <name>苏北之</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>unity3D游戏开发学习.md</title>
+    <link href="http://gaobo1112.github.io/2020/08/21/you-xi-kai-fa/unity/unity3d-you-xi-kai-fa-xue-xi/"/>
+    <id>http://gaobo1112.github.io/2020/08/21/you-xi-kai-fa/unity/unity3d-you-xi-kai-fa-xue-xi/</id>
+    <published>2020-08-21T11:25:42.000Z</published>
+    <updated>2020-08-21T11:25:42.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;unity3D游戏开发&quot;&gt;&lt;a href=&quot;#unity3D游戏开发&quot; class=&quot;headerlink&quot; title=&quot;unity3D游戏开发&quot;&gt;&lt;/a&gt;unity3D游戏开发&lt;/h2&gt;&lt;h3 id=&quot;第2章-编辑器结构&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="游戏开发" scheme="http://gaobo1112.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="Unity" scheme="http://gaobo1112.github.io/tags/Unity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c#基础.md</title>
+    <link href="http://gaobo1112.github.io/2020/05/11/you-xi-kai-fa/c/c-ji-chu/"/>
+    <id>http://gaobo1112.github.io/2020/05/11/you-xi-kai-fa/c/c-ji-chu/</id>
+    <published>2020-05-11T11:57:25.000Z</published>
+    <updated>2020-05-11T11:57:25.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;c-程序结构&quot;&gt;&lt;a href=&quot;#c-程序结构&quot; class=&quot;headerlink&quot; title=&quot;c#程序结构&quot;&gt;&lt;/a&gt;c#程序结构&lt;/h2&gt;&lt;h3 id=&quot;c-helloword&quot;&gt;&lt;a href=&quot;#c-helloword&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="游戏开发" scheme="http://gaobo1112.github.io/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java并发编程</title>
+    <link href="http://gaobo1112.github.io/2020/05/01/java/java-bing-fa-bian-cheng/"/>
+    <id>http://gaobo1112.github.io/2020/05/01/java/java-bing-fa-bian-cheng/</id>
+    <published>2020-05-01T11:03:41.000Z</published>
+    <updated>2020-05-01T11:03:41.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;使用synchronized的三种方法。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;synchronized保护的是对象而不是代码，只要访问的是同一个对象的synchronized方法，即使是不同的代码，也会被按照同步顺序执行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java编程基础</title>
+    <link href="http://gaobo1112.github.io/2020/04/29/java/java-bian-cheng-ji-chu/"/>
+    <id>http://gaobo1112.github.io/2020/04/29/java/java-bian-cheng-ji-chu/</id>
+    <published>2020-04-28T19:44:14.000Z</published>
+    <updated>2020-04-28T19:44:14.000Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试总结</title>
+    <link href="http://gaobo1112.github.io/2020/04/02/mian-shi/mian-shi-zong-jie/"/>
+    <id>http://gaobo1112.github.io/2020/04/02/mian-shi/mian-shi-zong-jie/</id>
+    <published>2020-04-01T16:26:23.000Z</published>
+    <updated>2020-04-01T16:26:23.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;常见题目&quot;&gt;&lt;a href=&quot;#常见题目&quot; class=&quot;headerlink&quot; title=&quot;常见题目&quot;&gt;&lt;/a&gt;常见题目&lt;/h2&gt;&lt;h3 id=&quot;jvm&quot;&gt;&lt;a href=&quot;#jvm&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>动态规划</title>
+    <link href="http://gaobo1112.github.io/2020/03/06/suan-fa/dong-tai-gui-hua/"/>
+    <id>http://gaobo1112.github.io/2020/03/06/suan-fa/dong-tai-gui-hua/</id>
+    <published>2020-03-06T15:02:44.000Z</published>
+    <updated>2020-03-06T15:02:44.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;动态规划解决步骤&quot;&gt;&lt;a href=&quot;#动态规划解决步骤&quot; class=&quot;headerlink&quot; title=&quot;动态规划解决步骤&quot;&gt;&lt;/a&gt;动态规划解决步骤&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;1. 首先明确dp数组所存放数据的意义。
+2.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>array</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/array/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/array/</id>
+    <published>2020-02-20T14:40:55.000Z</published>
+    <updated>2020-02-20T14:40:55.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;leetcode 1352&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关键是使用数组记录前面所有数的乘积，注意0的特殊情况，等于0的时候要讲数组清零，然后设为1。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;leetcode</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://gaobo1112.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数组,leetcode" scheme="http://gaobo1112.github.io/tags/%E6%95%B0%E7%BB%84-leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题目总结</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/suan-fa/mian-shi-ti-mu-zong-jie/</id>
+    <published>2020-02-20T12:28:52.000Z</published>
+    <updated>2020-02-20T12:28:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;c&quot;&gt;&lt;a href=&quot;#c&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="http://gaobo1112.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="c++,算法" scheme="http://gaobo1112.github.io/tags/c-%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件io</title>
+    <link href="http://gaobo1112.github.io/2020/02/20/linux/wen-jian-io/"/>
+    <id>http://gaobo1112.github.io/2020/02/20/linux/wen-jian-io/</id>
+    <published>2020-02-20T09:55:09.000Z</published>
+    <updated>2020-02-20T09:55:09.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;文件io&quot;&gt;&lt;a href=&quot;#文件io&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="c++" scheme="http://gaobo1112.github.io/categories/c/"/>
+    
+    
+    <category term="linux" scheme="http://gaobo1112.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown教程</title>
+    <link href="http://gaobo1112.github.io/2020/01/09/qian-duan/markdown-jiao-cheng/"/>
+    <id>http://gaobo1112.github.io/2020/01/09/qian-duan/markdown-jiao-cheng/</id>
+    <published>2020-01-09T14:31:18.000Z</published>
+    <updated>2020-01-09T14:31:18.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;使用#来表示标题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot; language-md&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://gaobo1112.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="markdown" scheme="http://gaobo1112.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c++ primer 学习笔记</title>
+    <link href="http://gaobo1112.github.io/2020/01/09/c/c-primer/"/>
+    <id>http://gaobo1112.github.io/2020/01/09/c/c-primer/</id>
+    <published>2020-01-09T11:19:17.000Z</published>
+    <updated>2020-01-09T11:19:17.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第2章-变量和类型&quot;&gt;&lt;a href=&quot;#第2章-变量和类型&quot; class=&quot;headerlink&quot; title=&quot;第2章 变量和类型&quot;&gt;&lt;/a&gt;第2章 变量和类型&lt;/h1&gt;&lt;h2 id=&quot;基本内置变量&quot;&gt;&lt;a href=&quot;#基本内置变量&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="c++" scheme="http://gaobo1112.github.io/categories/c/"/>
+    
+    
+    <category term="c++,编程语言" scheme="http://gaobo1112.github.io/tags/c-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客搭建</title>
+    <link href="http://gaobo1112.github.io/2020/01/08/qian-duan/bo-ke-da-jian/"/>
+    <id>http://gaobo1112.github.io/2020/01/08/qian-duan/bo-ke-da-jian/</id>
+    <published>2020-01-08T11:19:17.000Z</published>
+    <updated>2020-01-08T11:19:17.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;安装hexo&quot;&gt;&lt;a href=&quot;#安装hexo&quot; class=&quot;headerlink&quot; title=&quot;安装hexo&quot;&gt;&lt;/a&gt;安装hexo&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;下载&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;node.js&lt;/a&gt; </summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://gaobo1112.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="hexo" scheme="http://gaobo1112.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
